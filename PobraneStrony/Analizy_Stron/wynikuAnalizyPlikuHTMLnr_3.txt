@@ -1,0 +1,63 @@
+
+
+
+-------DANE Z WYNIKU SERP NR [3]-------
+Link: https://www.morizon.pl/domy/wroclaw/
+Część linku [0]: www.morizon.pl
+Część linku [1]: domy
+Część linku [2]: wroclaw
+Ilość części linku: 3
+Element: dom | Znaleziono elemetnów: 271
+Element: name="viewport | Znaleziono elemetnów: 0
+Element: name="description | Znaleziono elemetnów: 1
+      Opis: Lista 572 aktualnych ofert domów na sprzedaż we Wrocławiu. » Wyszukiwarka nieruchomości Morizon.pl
+Element: name="keywords | Znaleziono elemetnów: 0
+Element: name="robots | Znaleziono elemetnów: 0
+Element: property="fb:app_id | Znaleziono elemetnów: 1
+Element: property="og: | Znaleziono elemetnów: 7
+Element: property="al:android | Znaleziono elemetnów: 0
+Element: name="google-site-verification" | Znaleziono elemetnów: 0
+Element: rel="canonical | Znaleziono elemetnów: 1
+Element: rel="dns-prefetch | Znaleziono elemetnów: 0
+Element: rel=”preconnect | Znaleziono elemetnów: 0
+Element: rel=”preload | Znaleziono elemetnów: 0
+Element: http-equiv="X-UA-Compatible | Znaleziono elemetnów: 0
+Element: if lt IE | Znaleziono elemetnów: 0
+Element: alt="" | Znaleziono elemetnów: 2
+Element: alt=" | Znaleziono elemetnów: 99
+Element: captcha | Znaleziono elemetnów: 0
+Element: <h1 | Znaleziono elemetnów: 1
+Element: <h2 | Znaleziono elemetnów: 51
+Element: <h3 | Znaleziono elemetnów: 57
+Element: <h4 | Znaleziono elemetnów: 3
+Element: <h5 | Znaleziono elemetnów: 0
+Element: <h6 | Znaleziono elemetnów: 0
+Element: <header> | Znaleziono elemetnów: 41
+Element: <section> | Znaleziono elemetnów: 1
+Element: <aside> | Znaleziono elemetnów: 0
+Element: <main> | Znaleziono elemetnów: 0
+Element: <nav> | Znaleziono elemetnów: 0
+Element: <picture> | Znaleziono elemetnów: 0
+Element: <video> | Znaleziono elemetnów: 0
+Element: <article> | Znaleziono elemetnów: 0
+Element: <footer> | Znaleziono elemetnów: 0
+Element: <form> | Znaleziono elemetnów: 0
+-------WYNIKI PODSUMOWUJĄCE NR 3 SERP ZAWIERA-------
+
+FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: 
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:1
+link:1
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ:
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:0
+link:0
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:
+tylko w sekcji body:0
+

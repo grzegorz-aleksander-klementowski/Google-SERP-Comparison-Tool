@@ -1,0 +1,123 @@
+PRZELICZENIE ATRYBUTÓW 
+dom
+name="viewport
+name="description
+name="keywords
+property="fb:app_id
+property="og:
+property="al:android
+name="google-site-verification"
+rel="canonical
+rel="dns-prefetch
+rel=”preconnect
+rel=”preload
+http-equiv="X-UA-Compatible
+alt=""
+alt="
+captcha
+<h1
+<h2
+<h3
+<h4
+<h5
+<h6
+<header
+<section
+<aside
+<main
+<nav
+<article
+<footer
+<form (?)
+<picture (?)
+<video (?)
+
+DO WYCIĄGNIĘCIA:
+<h1, <h2, <h3, (...)>		- zrobione!
+słowa kluczowe 			- zrobione!
+link				- zrobione!
+fazy z linku			- zrobione!
+
+DO WYŚWIETLENIA:
+	-------WYNIK NR 1 SERP ZAWIERA-------
+IF(ilosc slow w frazie==1)
+CAŁA FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: 
+tylko <body>:
+słowach kluczowych:n
+opis:n
+link:n
+nagłówki: h1-n,h2-n,h3-n,h4-n,h5-n,h6-n
+
+IF(ilosc SŁÓW w frazie > 1) //wyjęte element yjak w, i, z, itp...
+SŁOWA FRAZY WYSZUKIWANIA SĄ ZAWARTE W: 
+tylko <body>:
+słowach kluczowych:n
+opis:n
+link:n
+nagłówki: h1-n,h2-n,h3-n,h4-n,h5-n,h6-n
+
+
+ILOŚĆ SŁÓW KLUCZOWYCH(nr_slow_klucz.) MOŻNA ZNALEŹĆ:
+tylko <body>:
+słowach kluczowych:n
+opis:n
+link:n
+nagłówki: h1-n,h2-n,h3-n,h4-n,h5-n,h6-n
+
+
+ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:
+tylko <body>: | słowach kluczowych:n | opis:n | 
+nagłówki: h1-n,h2-n,h3-n,h4-n,h5-n,h6-n |
+
+
+Pomysły:
+	- Czy posiada znaczniki dla robotów HTML5? 
+ 	-rozdzilelić frazy na slowa
+	- liczyc ile jest slow kluczowych z dlugim ogonem
+	- (PODCZAS późniejszej analizy wyników) - można podzielić wyniki na tranzakcyjne, informacyjne i nawigacyjne
+ILE RAZY OPIS ZAWIERA:
+
+W ilość w całości:
+	frazy
+	czy ma opis
+	słów kluczowych
+	Czy ma viewport
+	...
+
+Keywords zawiera:
+	fraza
+	Ile słów kluczowych?	- zrobione!	
+
+Czy link zawiera
+	keywords
+	frazy
+
+"description zawiera:
+	ile keywords
+	ile fazy z linku
+
+fazy z linku:
+	ile słów kluczowych
+	frazy
+
+Cześć body zawiera:
+	keywords 
+	fraza
+	fazy z linku
+
+wNagłówkach <h1, <h2, (...)
+	kerowds,
+	cześci z linku
+	fraza
+
+DO WYJĘCIA: (dopisać po co???)
+opis (description content) - porownać czy słowa kluczowe są w desctiption
+zawartość <h* - czy słowa kluczow są w <h*
+zawartość altów (<img alt="" - czy słowa kluczowe są w <img alt=""
+słowa kluczowe: Ile razy słowa kluczowe z jednej strony html są w innych stronach wyników SERP? 
+
+
+NA KONIEC MOZNA POBRAĆ WYCINEK GLOWNEGO PODSUMOWANIA Z WSZYSTKICH PLIKÓW DO JEDNEGO WYNIKU!!!
+
+
+

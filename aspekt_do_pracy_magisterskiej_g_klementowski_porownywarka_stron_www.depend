@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1665792757 source:/home/klemensgak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	<time.h>
+	"analiza_pliku_google_SERP.h"
+
+1663006878 source:/home/klemensgak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/analiza_pliku_google_SERP.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	"analiza_pliku_google_SERP.h"
+
+1663519251 /home/klemensgak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/analiza_pliku_google_SERP.h
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+
+1663006878 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/analiza_pliku_google_SERP.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	"analiza_pliku_google_SERP.h"
+
+1663519251 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/analiza_pliku_google_SERP.h
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+
+1666560558 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	<time.h>
+	"analiza_pliku_google_SERP.h"
+
