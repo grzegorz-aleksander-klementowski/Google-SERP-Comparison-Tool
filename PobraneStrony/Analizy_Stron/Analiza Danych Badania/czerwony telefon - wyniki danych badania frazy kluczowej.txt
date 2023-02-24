@@ -1,0 +1,564 @@
+
+
+
+-------DANE Z WYNIKU SERP NR [1]-------
+Link: https://www.euro.com.pl/telefony-komorkowe,dominujacy-odcien!czerwony.bhtml
+Część linku [0]: www.euro.com.pl
+Część linku [1]: telefony-komorkowe,dominujacy-odcien!czerwony.bhtml
+Ilość części linku: 2
+Element: czerwony telefon | Znaleziono elemetnów: 0
+Element: name="viewport | Znaleziono elemetnów: 0
+Element: name="description | Znaleziono elemetnów: 0
+Element: name="keywords | Znaleziono elemetnów: 0
+Element: name="robots | Znaleziono elemetnów: 0
+Element: property="fb:app_id | Znaleziono elemetnów: 0
+Element: property="og: | Znaleziono elemetnów: 0
+Element: property="al:android | Znaleziono elemetnów: 0
+Element: name="google-site-verification" | Znaleziono elemetnów: 0
+Element: rel="canonical | Znaleziono elemetnów: 0
+Element: rel="dns-prefetch | Znaleziono elemetnów: 0
+Element: rel=”preconnect | Znaleziono elemetnów: 0
+Element: rel=”preload | Znaleziono elemetnów: 0
+Element: http-equiv="X-UA-Compatible | Znaleziono elemetnów: 0
+Element: if lt IE | Znaleziono elemetnów: 0
+Element: alt="" | Znaleziono elemetnów: 0
+Element: alt=" | Znaleziono elemetnów: 0
+Element: captcha | Znaleziono elemetnów: 0
+Element: <h1 | Znaleziono elemetnów: 0
+Element: <h2 | Znaleziono elemetnów: 0
+Element: <h3 | Znaleziono elemetnów: 0
+Element: <h4 | Znaleziono elemetnów: 0
+Element: <h5 | Znaleziono elemetnów: 0
+Element: <h6 | Znaleziono elemetnów: 0
+Element: <header> | Znaleziono elemetnów: 0
+Element: <section> | Znaleziono elemetnów: 0
+Element: <aside> | Znaleziono elemetnów: 0
+Element: <main> | Znaleziono elemetnów: 0
+Element: <nav> | Znaleziono elemetnów: 0
+Element: <picture> | Znaleziono elemetnów: 0
+Element: <video> | Znaleziono elemetnów: 0
+Element: <article> | Znaleziono elemetnów: 0
+Element: <footer> | Znaleziono elemetnów: 0
+Element: <form> | Znaleziono elemetnów: 0
+-------WYNIKI PODSUMOWUJĄCE NR 1 SERP ZAWIERA-------
+
+FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: 
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:0
+link:2
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ:
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:0
+link:0
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:
+tylko w sekcji body:0
+
+
+
+
+-------DANE Z WYNIKU SERP NR [2]-------
+Link: https://pl.wikipedia.org/wiki/Gor%25C4%2585ca_linia_(termin)
+Część linku [0]: pl.wikipedia.org
+Część linku [1]: wiki
+Część linku [2]: Gor%25C4%2585ca_linia_(termin)
+Ilość części linku: 3
+Element: czerwony telefon | Znaleziono elemetnów: 0
+Element: name="viewport | Znaleziono elemetnów: 1
+Element: name="description | Znaleziono elemetnów: 0
+Element: name="keywords | Znaleziono elemetnów: 0
+Element: name="robots | Znaleziono elemetnów: 1
+Element: property="fb:app_id | Znaleziono elemetnów: 0
+Element: property="og: | Znaleziono elemetnów: 2
+Element: property="al:android | Znaleziono elemetnów: 0
+Element: name="google-site-verification" | Znaleziono elemetnów: 0
+Element: rel="canonical | Znaleziono elemetnów: 1
+Element: rel="dns-prefetch | Znaleziono elemetnów: 1
+Element: rel=”preconnect | Znaleziono elemetnów: 0
+Element: rel=”preload | Znaleziono elemetnów: 0
+Element: http-equiv="X-UA-Compatible | Znaleziono elemetnów: 0
+Element: if lt IE | Znaleziono elemetnów: 0
+Element: alt="" | Znaleziono elemetnów: 1
+Element: alt=" | Znaleziono elemetnów: 3
+Element: captcha | Znaleziono elemetnów: 0
+Element: <h1 | Znaleziono elemetnów: 1
+Element: <h2 | Znaleziono elemetnów: 1
+Element: <h3 | Znaleziono elemetnów: 8
+Element: <h4 | Znaleziono elemetnów: 0
+Element: <h5 | Znaleziono elemetnów: 0
+Element: <h6 | Znaleziono elemetnów: 0
+Element: <header> | Znaleziono elemetnów: 0
+Element: <section> | Znaleziono elemetnów: 0
+Element: <aside> | Znaleziono elemetnów: 0
+Element: <main> | Znaleziono elemetnów: 0
+Element: <nav> | Znaleziono elemetnów: 0
+Element: <picture> | Znaleziono elemetnów: 0
+Element: <video> | Znaleziono elemetnów: 0
+Element: <article> | Znaleziono elemetnów: 0
+Element: <footer> | Znaleziono elemetnów: 0
+Element: <form> | Znaleziono elemetnów: 0
+-------WYNIKI PODSUMOWUJĄCE NR 2 SERP ZAWIERA-------
+
+FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: 
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:0
+link:0
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ:
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:0
+link:0
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:
+tylko w sekcji body:93
+
+
+
+
+-------DANE Z WYNIKU SERP NR [3]-------
+Link: https://www.neonet.pl/smartfony-i-navi/smartfony/f/5477-kolor:czerwony.html
+Część linku [0]: www.neonet.pl
+Część linku [1]: smartfony-i-navi
+Część linku [2]: smartfony
+Część linku [3]: f
+Część linku [4]: 5477-kolor:czerwony.html
+Ilość części linku: 5
+Element: czerwony telefon | Znaleziono elemetnów: 0
+Element: name="viewport | Znaleziono elemetnów: 1
+Element: name="description | Znaleziono elemetnów: 1
+      Opis: Szeroki wybór produktów z kategorii Czerwone smartfony znajdziesz w sklepie NEONET. Sprawdź aktualne promocje i oferty specjalne w kategorii Czerwone smartfony.
+Element: name="keywords | Znaleziono elemetnów: 1
+      Słowa kluczowe(1): 
+      slowo klucz nr 1: SMARTFONY
+Element: name="robots | Znaleziono elemetnów: 1
+Element: property="fb:app_id | Znaleziono elemetnów: 0
+Element: property="og: | Znaleziono elemetnów: 5
+Element: property="al:android | Znaleziono elemetnów: 0
+Element: name="google-site-verification" | Znaleziono elemetnów: 0
+Element: rel="canonical | Znaleziono elemetnów: 1
+Element: rel="dns-prefetch | Znaleziono elemetnów: 0
+Element: rel=”preconnect | Znaleziono elemetnów: 0
+Element: rel=”preload | Znaleziono elemetnów: 0
+Element: http-equiv="X-UA-Compatible | Znaleziono elemetnów: 1
+Element: if lt IE | Znaleziono elemetnów: 0
+Element: alt="" | Znaleziono elemetnów: 1
+Element: alt=" | Znaleziono elemetnów: 1
+Element: captcha | Znaleziono elemetnów: 2
+Element: <h1 | Znaleziono elemetnów: 0
+Element: <h2 | Znaleziono elemetnów: 0
+Element: <h3 | Znaleziono elemetnów: 0
+Element: <h4 | Znaleziono elemetnów: 0
+Element: <h5 | Znaleziono elemetnów: 0
+Element: <h6 | Znaleziono elemetnów: 0
+Element: <header> | Znaleziono elemetnów: 0
+Element: <section> | Znaleziono elemetnów: 0
+Element: <aside> | Znaleziono elemetnów: 0
+Element: <main> | Znaleziono elemetnów: 0
+Element: <nav> | Znaleziono elemetnów: 0
+Element: <picture> | Znaleziono elemetnów: 0
+Element: <video> | Znaleziono elemetnów: 0
+Element: <article> | Znaleziono elemetnów: 0
+Element: <footer> | Znaleziono elemetnów: 0
+Element: <form> | Znaleziono elemetnów: 0
+-------WYNIKI PODSUMOWUJĄCE NR 3 SERP ZAWIERA-------
+
+FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: 
+tylko w sekcji body:15
+słowach kluczowych:0
+opis:0
+link:1
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ:
+tylko w sekcji body:24
+słowach kluczowych:0
+opis:2
+link:2
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:
+tylko w sekcji body:2916
+
+
+
+
+-------DANE Z WYNIKU SERP NR [4]-------
+Link: https://allegro.pl/kategoria/smartfony-i-telefony-komorkowe-165%3Fstring%3Dczerwone
+Część linku [0]: allegro.pl
+Część linku [1]: kategoria
+Część linku [2]: smartfony-i-telefony-komorkowe-165%3Fstring%3Dczerwone
+Ilość części linku: 3
+Element: czerwony telefon | Znaleziono elemetnów: 0
+Element: name="viewport | Znaleziono elemetnów: 0
+Element: name="description | Znaleziono elemetnów: 0
+Element: name="keywords | Znaleziono elemetnów: 0
+Element: name="robots | Znaleziono elemetnów: 0
+Element: property="fb:app_id | Znaleziono elemetnów: 0
+Element: property="og: | Znaleziono elemetnów: 0
+Element: property="al:android | Znaleziono elemetnów: 0
+Element: name="google-site-verification" | Znaleziono elemetnów: 0
+Element: rel="canonical | Znaleziono elemetnów: 0
+Element: rel="dns-prefetch | Znaleziono elemetnów: 0
+Element: rel=”preconnect | Znaleziono elemetnów: 0
+Element: rel=”preload | Znaleziono elemetnów: 0
+Element: http-equiv="X-UA-Compatible | Znaleziono elemetnów: 0
+Element: if lt IE | Znaleziono elemetnów: 0
+Element: alt="" | Znaleziono elemetnów: 0
+Element: alt=" | Znaleziono elemetnów: 0
+Element: captcha | Znaleziono elemetnów: 2
+Element: <h1 | Znaleziono elemetnów: 0
+Element: <h2 | Znaleziono elemetnów: 0
+Element: <h3 | Znaleziono elemetnów: 0
+Element: <h4 | Znaleziono elemetnów: 0
+Element: <h5 | Znaleziono elemetnów: 0
+Element: <h6 | Znaleziono elemetnów: 0
+Element: <header> | Znaleziono elemetnów: 0
+Element: <section> | Znaleziono elemetnów: 0
+Element: <aside> | Znaleziono elemetnów: 0
+Element: <main> | Znaleziono elemetnów: 0
+Element: <nav> | Znaleziono elemetnów: 0
+Element: <picture> | Znaleziono elemetnów: 0
+Element: <video> | Znaleziono elemetnów: 0
+Element: <article> | Znaleziono elemetnów: 0
+Element: <footer> | Znaleziono elemetnów: 0
+Element: <form> | Znaleziono elemetnów: 0
+-------WYNIKI PODSUMOWUJĄCE NR 4 SERP ZAWIERA-------
+
+FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: 
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:0
+link:1
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ:
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:0
+link:0
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:
+tylko w sekcji body:0
+
+
+
+
+-------DANE Z WYNIKU SERP NR [5]-------
+Link: https://allegro.pl/listing%3Fstring%3Dtelefon%2520czerwony
+Część linku [0]: allegro.pl
+Część linku [1]: listing%3Fstring%3Dtelefon%2520czerwony
+Ilość części linku: 2
+Element: czerwony telefon | Znaleziono elemetnów: 0
+Element: name="viewport | Znaleziono elemetnów: 0
+Element: name="description | Znaleziono elemetnów: 0
+Element: name="keywords | Znaleziono elemetnów: 0
+Element: name="robots | Znaleziono elemetnów: 0
+Element: property="fb:app_id | Znaleziono elemetnów: 0
+Element: property="og: | Znaleziono elemetnów: 0
+Element: property="al:android | Znaleziono elemetnów: 0
+Element: name="google-site-verification" | Znaleziono elemetnów: 0
+Element: rel="canonical | Znaleziono elemetnów: 0
+Element: rel="dns-prefetch | Znaleziono elemetnów: 0
+Element: rel=”preconnect | Znaleziono elemetnów: 0
+Element: rel=”preload | Znaleziono elemetnów: 0
+Element: http-equiv="X-UA-Compatible | Znaleziono elemetnów: 0
+Element: if lt IE | Znaleziono elemetnów: 0
+Element: alt="" | Znaleziono elemetnów: 0
+Element: alt=" | Znaleziono elemetnów: 0
+Element: captcha | Znaleziono elemetnów: 2
+Element: <h1 | Znaleziono elemetnów: 0
+Element: <h2 | Znaleziono elemetnów: 0
+Element: <h3 | Znaleziono elemetnów: 0
+Element: <h4 | Znaleziono elemetnów: 0
+Element: <h5 | Znaleziono elemetnów: 0
+Element: <h6 | Znaleziono elemetnów: 0
+Element: <header> | Znaleziono elemetnów: 0
+Element: <section> | Znaleziono elemetnów: 0
+Element: <aside> | Znaleziono elemetnów: 0
+Element: <main> | Znaleziono elemetnów: 0
+Element: <nav> | Znaleziono elemetnów: 0
+Element: <picture> | Znaleziono elemetnów: 0
+Element: <video> | Znaleziono elemetnów: 0
+Element: <article> | Znaleziono elemetnów: 0
+Element: <footer> | Znaleziono elemetnów: 0
+Element: <form> | Znaleziono elemetnów: 0
+-------WYNIKI PODSUMOWUJĄCE NR 5 SERP ZAWIERA-------
+
+FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: 
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:0
+link:2
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ:
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:0
+link:0
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:
+tylko w sekcji body:0
+
+
+
+
+-------DANE Z WYNIKU SERP NR [6]-------
+Link: https://wiadomosci.wp.pl/zadzwonil-czerwony-telefon-na-linii-rosja-usa-pierwszy-i-jedyny-raz-6839127993944768a
+Część linku [0]: wiadomosci.wp.pl
+Część linku [1]: zadzwonil-czerwony-telefon-na-linii-rosja-usa-pierwszy-i-jedyny-raz-6839127993944768a
+Ilość części linku: 2
+Element: czerwony telefon | Znaleziono elemetnów: 8
+Element: name="viewport | Znaleziono elemetnów: 0
+Element: name="description | Znaleziono elemetnów: 1
+      Opis: Specjalna linia komunikacyjna między USA i Rosją została użyta jeden raz. Jej nadrzędnym celem jest deeskalacja konfliktu między mocarstwami. Nie wiadomo, kiedy dokładnie z niej korzystano. Mówi się jednak
+Element: name="keywords | Znaleziono elemetnów: 0
+Element: name="robots | Znaleziono elemetnów: 0
+Element: property="fb:app_id | Znaleziono elemetnów: 1
+Element: property="og: | Znaleziono elemetnów: 7
+Element: property="al:android | Znaleziono elemetnów: 0
+Element: name="google-site-verification" | Znaleziono elemetnów: 1
+Element: rel="canonical | Znaleziono elemetnów: 1
+Element: rel="dns-prefetch | Znaleziono elemetnów: 34
+Element: rel=”preconnect | Znaleziono elemetnów: 0
+Element: rel=”preload | Znaleziono elemetnów: 0
+Element: http-equiv="X-UA-Compatible | Znaleziono elemetnów: 0
+Element: if lt IE | Znaleziono elemetnów: 0
+Element: alt="" | Znaleziono elemetnów: 2
+Element: alt=" | Znaleziono elemetnów: 7
+Element: captcha | Znaleziono elemetnów: 0
+Element: <h1 | Znaleziono elemetnów: 1
+Element: <h2 | Znaleziono elemetnów: 3
+Element: <h3 | Znaleziono elemetnów: 0
+Element: <h4 | Znaleziono elemetnów: 0
+Element: <h5 | Znaleziono elemetnów: 0
+Element: <h6 | Znaleziono elemetnów: 0
+Element: <header> | Znaleziono elemetnów: 0
+Element: <section> | Znaleziono elemetnów: 0
+Element: <aside> | Znaleziono elemetnów: 0
+Element: <main> | Znaleziono elemetnów: 0
+Element: <nav> | Znaleziono elemetnów: 0
+Element: <picture> | Znaleziono elemetnów: 0
+Element: <video> | Znaleziono elemetnów: 0
+Element: <article> | Znaleziono elemetnów: 0
+Element: <footer> | Znaleziono elemetnów: 0
+Element: <form> | Znaleziono elemetnów: 0
+-------WYNIKI PODSUMOWUJĄCE NR 6 SERP ZAWIERA-------
+
+FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: 
+tylko w sekcji body:16
+słowach kluczowych:0
+opis:0
+link:2
+nagłówki: h1-2; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ:
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:0
+link:0
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:
+tylko w sekcji body:207
+
+
+
+
+-------DANE Z WYNIKU SERP NR [7]-------
+Link: https://www.rmf24.pl/raporty/raport-wojna-z-rosja/news-czy-czerwony-telefon-w-waszyngtonie-i-w-moskwie-znow-zadzwon,nId,6104852
+Część linku [0]: www.rmf24.pl
+Część linku [1]: raporty
+Część linku [2]: raport-wojna-z-rosja
+Część linku [3]: news-czy-czerwony-telefon-w-waszyngtonie-i-w-moskwie-znow-zadzwon,nId,6104852
+Ilość części linku: 4
+Element: czerwony telefon | Znaleziono elemetnów: 18
+Element: name="viewport | Znaleziono elemetnów: 1
+Element: name="description | Znaleziono elemetnów: 0
+Element: name="keywords | Znaleziono elemetnów: 0
+Element: name="robots | Znaleziono elemetnów: 2
+Element: property="fb:app_id | Znaleziono elemetnów: 1
+Element: property="og: | Znaleziono elemetnów: 5
+Element: property="al:android | Znaleziono elemetnów: 0
+Element: name="google-site-verification" | Znaleziono elemetnów: 0
+Element: rel="canonical | Znaleziono elemetnów: 1
+Element: rel="dns-prefetch | Znaleziono elemetnów: 23
+Element: rel=”preconnect | Znaleziono elemetnów: 0
+Element: rel=”preload | Znaleziono elemetnów: 0
+Element: http-equiv="X-UA-Compatible | Znaleziono elemetnów: 1
+Element: if lt IE | Znaleziono elemetnów: 0
+Element: alt="" | Znaleziono elemetnów: 2
+Element: alt=" | Znaleziono elemetnów: 11
+Element: captcha | Znaleziono elemetnów: 0
+Element: <h1 | Znaleziono elemetnów: 1
+Element: <h2 | Znaleziono elemetnów: 13
+Element: <h3 | Znaleziono elemetnów: 3
+Element: <h4 | Znaleziono elemetnów: 0
+Element: <h5 | Znaleziono elemetnów: 0
+Element: <h6 | Znaleziono elemetnów: 0
+Element: <header> | Znaleziono elemetnów: 0
+Element: <section> | Znaleziono elemetnów: 0
+Element: <aside> | Znaleziono elemetnów: 0
+Element: <main> | Znaleziono elemetnów: 0
+Element: <nav> | Znaleziono elemetnów: 0
+Element: <picture> | Znaleziono elemetnów: 4
+Element: <video> | Znaleziono elemetnów: 0
+Element: <article> | Znaleziono elemetnów: 0
+Element: <footer> | Znaleziono elemetnów: 0
+Element: <form> | Znaleziono elemetnów: 0
+-------WYNIKI PODSUMOWUJĄCE NR 7 SERP ZAWIERA-------
+
+FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: 
+tylko w sekcji body:44
+słowach kluczowych:0
+opis:0
+link:2
+nagłówki: h1-2; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ:
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:0
+link:0
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:
+tylko w sekcji body:158
+
+
+
+
+-------DANE Z WYNIKU SERP NR [9]-------
+Link: https://www.tvokazje.pl/telefony-komorkowe/6398-comfort-mm760-czerwony-telefon-dla-seniora.html
+Część linku [0]: www.tvokazje.pl
+Część linku [1]: telefony-komorkowe
+Część linku [2]: 6398-comfort-mm760-czerwony-telefon-dla-seniora.html
+Ilość części linku: 3
+Element: czerwony telefon | Znaleziono elemetnów: 43
+Element: name="viewport | Znaleziono elemetnów: 1
+Element: name="description | Znaleziono elemetnów: 1
+      Opis: Comfort MM760 2G Nowoczesny, unikalny design telefonu z metalowymi elementami, które wyglądają prestiżowo. Dostępny w trzech kolorach: czarnym, białym i czerwonym.
+Element: name="keywords | Znaleziono elemetnów: 0
+Element: name="robots | Znaleziono elemetnów: 0
+Element: property="fb:app_id | Znaleziono elemetnów: 0
+Element: property="og: | Znaleziono elemetnów: 7
+Element: property="al:android | Znaleziono elemetnów: 0
+Element: name="google-site-verification" | Znaleziono elemetnów: 0
+Element: rel="canonical | Znaleziono elemetnów: 1
+Element: rel="dns-prefetch | Znaleziono elemetnów: 0
+Element: rel=”preconnect | Znaleziono elemetnów: 0
+Element: rel=”preload | Znaleziono elemetnów: 0
+Element: http-equiv="X-UA-Compatible | Znaleziono elemetnów: 0
+Element: if lt IE | Znaleziono elemetnów: 0
+Element: alt="" | Znaleziono elemetnów: 2
+Element: alt=" | Znaleziono elemetnów: 48
+Element: captcha | Znaleziono elemetnów: 2
+Element: <h1 | Znaleziono elemetnów: 2
+Element: <h2 | Znaleziono elemetnów: 2
+Element: <h3 | Znaleziono elemetnów: 16
+Element: <h4 | Znaleziono elemetnów: 16
+Element: <h5 | Znaleziono elemetnów: 0
+Element: <h6 | Znaleziono elemetnów: 29
+Element: <header> | Znaleziono elemetnów: 0
+Element: <section> | Znaleziono elemetnów: 0
+Element: <aside> | Znaleziono elemetnów: 0
+Element: <main> | Znaleziono elemetnów: 0
+Element: <nav> | Znaleziono elemetnów: 0
+Element: <picture> | Znaleziono elemetnów: 0
+Element: <video> | Znaleziono elemetnów: 0
+Element: <article> | Znaleziono elemetnów: 0
+Element: <footer> | Znaleziono elemetnów: 0
+Element: <form> | Znaleziono elemetnów: 0
+-------WYNIKI PODSUMOWUJĄCE NR 9 SERP ZAWIERA-------
+
+FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: 
+tylko w sekcji body:303
+słowach kluczowych:0
+opis:2
+link:3
+nagłówki: h1-2; h2-0; h3-13; h4-0; h5-0; h6-1;
+
+ILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ:
+tylko w sekcji body:0
+słowach kluczowych:0
+opis:0
+link:0
+nagłówki: h1-0; h2-0; h3-0; h4-0; h5-0; h6-0;
+
+ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:
+tylko w sekcji body:309
+
+
+
+
+-------DANE Z WYNIKU SERP NR [10]-------
+Link: https://www.wybieramlaptopa.pl/ranking-najlepszych-laptopow
+Część linku [0]: www.wybieramlaptopa.pl
+Część linku [1]: ranking-najlepszych-laptopow
+Ilość części linku: 2
+Element: szybki laptop | Znaleziono elemetnów: 0
+Element: name="viewport | Znaleziono elemetnów: 1
+Element: name="description | Znaleziono elemetnów: 1
+      Opis: Ranking laptopów - jaki najlepszy laptop kupić w 2023. Polecane laptopy do gier, domu, mobilne. Pomagamy wybrać notebooki 17 cali 15 cali do 2000 2500 3000 3500 4000. TOP 10 modeli
+Element: name="keywords | Znaleziono elemetnów: 1
+      Słowa kluczowe(32): ranking laptopów, polecane notebooki, jaki laptop kupić, najlepsze laptopy, gry, gaming, laptop, jaki, kupić, dom, mobilne, top10, 2023 r, tanio, dobry, notebook, jaki do 2000, jaki do 2500, jaki do 3000, jaki do 3500, jaki do 4000, porównanie laptopów, laptop 17 cali, laptop 15 cali, zestawienie, gracz, Asus, Lenovo, MSI, HP, Acer, Dell
+Element: name="robots | Znaleziono elemetnów: 1
+Element: property="fb:app_id | Znaleziono elemetnów: 0
+Element: property="og: | Znaleziono elemetnów: 0
+Element: property="al:android | Znaleziono elemetnów: 0
+Element: name="google-site-verification" | Znaleziono elemetnów: 0
+Element: rel="canonical | Znaleziono elemetnów: 1
+Element: rel="dns-prefetch | Znaleziono elemetnów: 0
+Element: rel=”preconnect | Znaleziono elemetnów: 0
+Element: rel=”preload | Znaleziono elemetnów: 0
+Element: http-equiv="X-UA-Compatible | Znaleziono elemetnów: 0
+Element: if lt IE | Znaleziono elemetnów: 0
+Element: alt="" | Znaleziono elemetnów: 0
+Element: alt=" | Znaleziono elemetnów: 28
+Element: captcha | Znaleziono elemetnów: 0
+Element: <h1 | Znaleziono elemetnów: 1
+Element: <h2 | Znaleziono elemetnów: 11
+Element: <h3 | Znaleziono elemetnów: 3
+Element: <h4 | Znaleziono elemetnów: 7
+Element: <h5 | Znaleziono elemetnów: 0
+Element: <h6 | Znaleziono elemetnów: 0
+Element: <header> | Znaleziono elemetnów: 0
+Element: <section> | Znaleziono elemetnów: 0
+Element: <aside> | Znaleziono elemetnów: 0
+Element: <main> | Znaleziono elemetnów: 0
+Element: <nav> | Znaleziono elemetnów: 0
+Element: <picture> | Znaleziono elemetnów: 0
+Element: <video> | Znaleziono elemetnów: 0
+Element: <article> | Znaleziono elemetnów: 0
+Element: <footer> | Znaleziono elemetnów: 0
+Element: <form> | Znaleziono elemetnów: 0
+-------WYNIKI PODSUMOWUJĄCE NR 10 SERP ZAWIERA-------
+
+FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: 
+tylko w sekcji body:259
+słowach kluczowych:7
+opis:3
+link:2
+nagłówki: h1-5; h2-9; h3-0; h4-6; h5-0; h6-0;
+
+ILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ:
+tylko w sekcji body:642
+słowach kluczowych:0
+opis:9
+link:2
+nagłówki: h1-0; h2-21; h3-3; h4-11; h5-0; h6-0;
+
+ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:
+tylko w sekcji body:52
+
