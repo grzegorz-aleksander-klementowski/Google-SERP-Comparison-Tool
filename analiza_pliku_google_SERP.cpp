@@ -169,11 +169,9 @@ string analizaPlikuHTML(string sciezka)
             plik.close();
             exit(0);
         }else{}
-cout<<"Test 1 pass"<<endl;
+
         if (linia.find(SERPgoogle) != std::string::npos)
         {
-
-cout<<"Test 2 pass"<<endl;
 
             nPos = linia.find(SERPgoogle); // first occurrence
             count = 1;
@@ -185,7 +183,7 @@ cout<<"Test 2 pass"<<endl;
                     if(typWyniku==1)
                     {
                         mapSERPnumber++;
-                        newSERPnumber = mapSERPnumber;cout<<"Test 3-1 pass"<<endl;
+                        newSERPnumber = mapSERPnumber;
                     }
                     else if(typWyniku == 2)
                     {cout<<"Test 3-2 pass"<<endl;
@@ -197,13 +195,13 @@ cout<<"Test 2 pass"<<endl;
                     }
                     else
                     {
-                        mainSERPnumber++;cout<<"Test 3-4 pass"<<endl;
+                        mainSERPnumber++;
                         newSERPnumber = mainSERPnumber;
-                    }cout<<"Test 3-5 pass"<<endl;
+                    }
                     wynikSERPstream << wypiszNaglowekWynikuSERP(nPos, linia, newSERPnumber, SERPgoogle, SERPgoogleMaps) << endl;
-                    cout<<"Test 3-6 pass"<<endl;
+
                     nPos = linia.find(SERPgoogle, nPos + 1);
-                }cout<<"Test 4 pass"<<endl;
+                }
         }
         else nr_linii++;cout<<"Test 5 pass"<<endl;
     }cout<<"Test 6 pass"<<endl;

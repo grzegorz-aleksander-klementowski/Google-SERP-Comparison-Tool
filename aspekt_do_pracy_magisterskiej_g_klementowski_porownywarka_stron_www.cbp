@@ -35,6 +35,8 @@
 		<Unit filename="analiza_pliku_google_SERP.cpp" />
 		<Unit filename="analiza_pliku_google_SERP.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="podsumowanieWynikówSERP.cpp" />
+		<Unit filename="podsumowanieWynikówSERP.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
