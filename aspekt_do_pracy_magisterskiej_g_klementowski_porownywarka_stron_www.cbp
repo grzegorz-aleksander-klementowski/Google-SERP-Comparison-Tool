@@ -34,9 +34,15 @@
 		</Compiler>
 		<Unit filename="analiza_pliku_google_SERP.cpp" />
 		<Unit filename="analiza_pliku_google_SERP.h" />
+		<Unit filename="automatyzacja_procesu_analizy_fraz_kluczowych.cpp" />
+		<Unit filename="automatyzacja_procesu_analizy_fraz_kluczowych.h" />
+		<Unit filename="globals.cpp" />
+		<Unit filename="globals.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="podsumowanieWynikówSERP.cpp" />
 		<Unit filename="podsumowanieWynikówSERP.h" />
+		<Unit filename="utils.cpp" />
+		<Unit filename="utils.hpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

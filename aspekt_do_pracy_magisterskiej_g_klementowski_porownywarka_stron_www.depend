@@ -23,22 +23,69 @@
 	<filesystem>
 	<cstdlib>
 
-1663006878 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/analiza_pliku_google_SERP.cpp
+1677778788 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/analiza_pliku_google_SERP.cpp
 	<iostream>
 	<string>
 	<fstream>
 	<filesystem>
 	<cstdlib>
 	"analiza_pliku_google_SERP.h"
+	"globals.h"
 
-1663519251 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/analiza_pliku_google_SERP.h
+1677778789 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/analiza_pliku_google_SERP.h
 	<iostream>
 	<string>
 	<fstream>
 	<filesystem>
 	<cstdlib>
 
-1666560558 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/main.cpp
+1678283044 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	<time.h>
+	<vector>
+	"analiza_pliku_google_SERP.h"
+	"podsumowanieWynikówSERP.h"
+	"automatyzacja_procesu_analizy_fraz_kluczowych.h"
+	"globals.h"
+
+1678215392 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/podsumowanieWynikówSERP.h
+	<string>
+	"utils.hpp"
+
+1678114958 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/globals.h
+	<string>
+
+1678102628 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/globals.cpp
+	"globals.h"
+
+1677654868 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3. kopia)/analiza_pliku_google_SERP.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	"analiza_pliku_google_SERP.h"
+	"globals.h"
+
+1677654868 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3. kopia)/analiza_pliku_google_SERP.h
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+
+1677573209 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3. kopia)/globals.h
+	<string>
+	<iostream>
+
+1677573225 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3. kopia)/globals.cpp
+	"globals.h"
+
+1677655138 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3. kopia)/main.cpp
 	<iostream>
 	<string>
 	<fstream>
@@ -46,4 +93,293 @@
 	<cstdlib>
 	<time.h>
 	"analiza_pliku_google_SERP.h"
+	"podsumowanieWynikówSERP.h"
+	"globals.h"
+
+1677754307 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3. kopia)/podsumowanieWynikówSERP.h
+
+1677754674 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3 (1. kopia). kopia)/analiza_pliku_google_SERP.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	"analiza_pliku_google_SERP.h"
+	"globals.h"
+
+1677754672 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3 (1. kopia). kopia)/analiza_pliku_google_SERP.h
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+
+1677573209 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3 (1. kopia). kopia)/globals.h
+	<string>
+	<iostream>
+
+1677573225 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3 (1. kopia). kopia)/globals.cpp
+	"globals.h"
+
+1677655138 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3 (1. kopia). kopia)/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	<time.h>
+	"analiza_pliku_google_SERP.h"
+	"podsumowanieWynikówSERP.h"
+	"globals.h"
+
+1677754759 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3 (1. kopia). kopia)/podsumowanieWynikówSERP.h
+
+1677754674 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3 (1. kopia) (1. kopia). kopia)/analiza_pliku_google_SERP.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	"analiza_pliku_google_SERP.h"
+	"globals.h"
+
+1677754672 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3 (1. kopia) (1. kopia). kopia)/analiza_pliku_google_SERP.h
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+
+1677573209 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3 (1. kopia) (1. kopia). kopia)/globals.h
+	<string>
+	<iostream>
+
+1677573225 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3 (1. kopia) (1. kopia). kopia)/globals.cpp
+	"globals.h"
+
+1677655138 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3 (1. kopia) (1. kopia). kopia)/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	<time.h>
+	"analiza_pliku_google_SERP.h"
+	"podsumowanieWynikówSERP.h"
+	"globals.h"
+
+1677754971 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (3 (1. kopia) (1. kopia). kopia)/podsumowanieWynikówSERP.h
+
+1677573225 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne/globals.cpp
+	"globals.h"
+
+1677573209 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne/globals.h
+	<string>
+	<iostream>
+
+1677655138 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	<time.h>
+	"analiza_pliku_google_SERP.h"
+	"podsumowanieWynikówSERP.h"
+	"globals.h"
+
+1677778106 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne/analiza_pliku_google_SERP.h
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+
+1677754971 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne/podsumowanieWynikówSERP.h
+
+1677778108 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne (1. kopia)/analiza_pliku_google_SERP.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	"analiza_pliku_google_SERP.h"
+	"globals.h"
+
+1677778106 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne (1. kopia)/analiza_pliku_google_SERP.h
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+
+1677573209 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne (1. kopia)/globals.h
+	<string>
+	<iostream>
+
+1677573225 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne (1. kopia)/globals.cpp
+	"globals.h"
+
+1677655138 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne (1. kopia)/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	<time.h>
+	"analiza_pliku_google_SERP.h"
+	"podsumowanieWynikówSERP.h"
+	"globals.h"
+
+1677754971 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne (1. kopia)/podsumowanieWynikówSERP.h
+
+1677573225 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne (1 (1. kopia). kopia)/globals.cpp
+	"globals.h"
+
+1677573209 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne (1 (1. kopia). kopia)/globals.h
+	<string>
+	<iostream>
+
+1677655138 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne (1 (1. kopia). kopia)/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	<time.h>
+	"analiza_pliku_google_SERP.h"
+	"podsumowanieWynikówSERP.h"
+	"globals.h"
+
+1677778789 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne (1 (1. kopia). kopia)/analiza_pliku_google_SERP.h
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+
+1677754971 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost poprawne (1 (1. kopia). kopia)/podsumowanieWynikówSERP.h
+
+1677778788 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost nazw fun ok/analiza_pliku_google_SERP.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	"analiza_pliku_google_SERP.h"
+	"globals.h"
+
+1677778789 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost nazw fun ok/analiza_pliku_google_SERP.h
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+
+1677783206 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost nazw fun ok/globals.h
+
+1677783188 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost nazw fun ok/globals.cpp
+	<string>
+
+1677782951 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost nazw fun ok/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	<time.h>
+	"analiza_pliku_google_SERP.h"
+	"podsumowanieWynikówSERP.h"
+	"automatyzacja_procesu_analizy_fraz_kluczowych.h"
+	"globals.h"
+
+1677785302 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost nazw fun ok/podsumowanieWynikówSERP.h
+	<string>
+
+1677782636 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost nazw fun ok/automatyzacja_procesu_analizy_fraz_kluczowych.h
+
+1677784047 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www - ost nazw fun ok/automatyzacja_procesu_analizy_fraz_kluczowych.cpp
+	<iostream>
+	<string>
+	"podsumowanieWynikówSERP.h"
+	"globals.h"
+
+1678213151 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/automatyzacja_procesu_analizy_fraz_kluczowych.h
+
+1678214484 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/automatyzacja_procesu_analizy_fraz_kluczowych.cpp
+	<iostream>
+	<string>
+	<vector>
+	<fstream>
+	<chrono>
+	<thread>
+	<cstdlib>
+	<filesystem>
+	<ctime>
+	<iomanip>
+	<sstream>
+	"podsumowanieWynikówSERP.h"
+	"globals.h"
+
+1678369236 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/utils.hpp
+
+1677778788 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (22. kopia)/analiza_pliku_google_SERP.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	"analiza_pliku_google_SERP.h"
+	"globals.h"
+
+1677778789 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (22. kopia)/analiza_pliku_google_SERP.h
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+
+1678114958 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (22. kopia)/globals.h
+	<string>
+
+1678214484 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (22. kopia)/automatyzacja_procesu_analizy_fraz_kluczowych.cpp
+	<iostream>
+	<string>
+	<vector>
+	<fstream>
+	<chrono>
+	<thread>
+	<cstdlib>
+	<filesystem>
+	<ctime>
+	<iomanip>
+	<sstream>
+	"podsumowanieWynikówSERP.h"
+	"globals.h"
+
+1678215392 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (22. kopia)/podsumowanieWynikówSERP.h
+	<string>
+	"utils.hpp"
+
+1678215166 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (22. kopia)/utils.hpp
+
+1678102628 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (22. kopia)/globals.cpp
+	"globals.h"
+
+1678283044 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (22. kopia)/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	<time.h>
+	<vector>
+	"analiza_pliku_google_SERP.h"
+	"podsumowanieWynikówSERP.h"
+	"automatyzacja_procesu_analizy_fraz_kluczowych.h"
+	"globals.h"
+
+1678213151 /home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www (22. kopia)/automatyzacja_procesu_analizy_fraz_kluczowych.h
+
+1678369268 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/utils.cpp
 

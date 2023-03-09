@@ -4,16 +4,19 @@
 #include <filesystem>
 #include <cstdlib>
 #include <time.h>
+#include <vector>
+
+//WŁASNE FUNCKJE
 #include "analiza_pliku_google_SERP.h"
 #include "podsumowanieWynikówSERP.h"
+#include "automatyzacja_procesu_analizy_fraz_kluczowych.h"
+#include "globals.h"
 
 using namespace std;
 
-
+void procedura_wybierania_frazy_kluczowej();
 
 //ZAMINNE GLOBALNE
-string frazaGoogleSERP;
-string analizaSERP;
 
 
 
@@ -22,58 +25,48 @@ int main()
     //zasady: KISS, proceduralnie
     //string analizaSERP, frazaGoogleSERP = "duży dom we wrocławskim lesie";
 
-    proceduraWypisywaniaStrumieniowego(introText());
+    procedura_wypisywania_strumieniowego(intro_text());
+    procedura_zapytania_uzyt_o_automatyzacje();
+    procedura_aktualizowania_folderow();
+    procedura_usuwania_przeanalizowanych_plikow();
 
-    //procesWykonywaniaNowejAnalizySERP(true);
+    if(czyWykonacAutomatyzacje==true)
+    {
+        procedura_aktualizowania_folderu_autom_analiz();
+        vector<string> frazy_kluczowe = wektor_pobieranych_fraz_kluczowych_z_pliku(wypisz_sciezke_do_pliku_txt_z_frazami_kluczowymi());
+        int nrFrazy=1;
+        for (const auto& fraza : frazy_kluczowe)
+        {
+            procedura_usuwania_przeanalizowanych_plikow();
+            pobier_strone_www(link_do_google_serp(fraza), "./wyszukane_strony_google/", "serp_google.html");
+            analizaSERP = analiza_pliku_html("./wyszukane_strony_google/serp_google.html");
+            procedura_wypisywania_strumieniowego(analizaSERP);
+            przyg_do_porow_stron_serp(analizaSERP);
+            pobieranie_stron_html_z_serp();
+            procedura_wypisywania_podsumowania_serp(fraza);
 
-    frazaGoogleSERP = frazaGoogle();
-    pobierzStroneWWW(linkDoGoogleSERP(frazaGoogleSERP), "./wyszukane_strony_google/", "serp_google.html");
-    analizaSERP = analizaPlikuHTML("./wyszukane_strony_google/serp_google.html");
-    proceduraWypisywaniaStrumieniowego(analizaSERP);
-    przygDoPorowStronSERP(analizaSERP);
-    pobieranieStronHTMLzSERP();
+            procedura_tworzenia_folderu_doc_dla_analizy_danej_frazy(fraza);
+            procedura_archwizowania_zawartosci(fraza);
 
+            dopisz_do_pliku_csv(lokalizacjaWynikowAnalizyCSV, wektor_zapisywania_wynikow_analizy_do_pliku_csv(fraza,nrFrazy++));
 
-    //proceduraZamianyPlikuPrezentujacyDaneNaCSV();
+            opoznij(5, 10);
+        }
+        procedura_zakończenia_automatycznego_analizowania_fraz_kluczowych();
+
+    }
+    else
+    {
+        frazaGoogleSERP = fraza_google();
+
+        pobier_strone_www(link_do_google_serp(frazaGoogleSERP), "./wyszukane_strony_google/", "serp_google.html");
+        analizaSERP = analiza_pliku_html("./wyszukane_strony_google/serp_google.html");
+        procedura_wypisywania_strumieniowego(analizaSERP);
+        przyg_do_porow_stron_serp(analizaSERP);
+        pobieranie_stron_html_z_serp();
+
+        procedura_wypisywania_podsumowania_serp(frazaGoogleSERP);
+    }
 
     return 0;
 }
-
-
-//FUNKCJE
-
-
-/*
-void proceduraZamianyPlikuPrezentujacyDaneNaCSV()
-{
-    system("mkdir -p ./PobraneStrony/Analizy_Stron/plikiCSV");
-    fstream plik;
-    string sciezkaDoPliku = "./PobraneStrony/Analizy_Stron/wynikuAnalizyPlikuHTMLnr_1.txt";
-    plik.open(sciezkaDoPliku, ios::in);
-    if(plik.good()==false)
-    {
-        cout << "Plik nie istnieje!" << endl;
-        exit(0);
-    }
-    string linia;
-    string wartosc;
-    string dana;
-    int nr_linii = 1;
-
-    size_t pozycja;
-
-    while(getline(plik,linia))
-    {
-        if (linia.find("Link:") != string::npos)
-        {
-            dana = "Link: ";
-            pozycja = linia.find(dana);
-            wartosc = linia.substr(pozycja + dana.length());
-        }
-    }
-    cout << wartosc;
-}
-
-
-*/
-

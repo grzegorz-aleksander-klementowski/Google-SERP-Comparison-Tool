@@ -5,18 +5,19 @@
 #include <cstdlib>
 
 #include "analiza_pliku_google_SERP.h"
+#include "globals.h"
 
 
 using namespace std;
 
 
-string introText()
+string intro_text()
 {
     string opis = "Jest to program napisany jako aspekt inżynierski dla Wyższej Szkoły Informatyki i Zarządzania COPERNICUS we Wrocławiu. \n\nProgram ma na celu porównanie stron internetowychm, ich słów kluczowych, tytułów jak i również opisów. Program samodzielnie wyszuka strony internetowe po wpisaniu danej frazy i porówna strony internetowe, których adresy znalazły się na pierwszej stronie wyszukiwarki po wprowadzeniu frazy.\n\n";
     return opis;
 }
 
-string frazaGoogle()
+string fraza_google()
     {
         const int maxFrazaChar = 70;
         const int minFrazaChar = 0;
@@ -60,7 +61,7 @@ string frazaGoogle()
         return fraza;
     }
 
-string linkDoGoogleSERP(string wpisanaFraza)
+string link_do_google_serp(string wpisanaFraza)
 {
 
     string fraza, przedrostekLinkGoogle="https://www.google.com/search?q=", calyLinkGoogle, komenda;
@@ -83,7 +84,7 @@ string linkDoGoogleSERP(string wpisanaFraza)
 
 }
 
-void pobierzStroneWWW(string link, string celDolcelowyPobrania, string nazwijPobranaStroneWWW)
+void pobier_strone_www(string link, string celDolcelowyPobrania, string nazwijPobranaStroneWWW)
 {
 
     string curl_argumenty=" -L -H \"User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0\" ";
@@ -110,7 +111,7 @@ void pobierzStroneWWW(string link, string celDolcelowyPobrania, string nazwijPob
 
 }
 
-string analizaPlikuHTML(string sciezka)
+string analiza_pliku_html(string sciezka)
 {
     fstream plik;
     plik.open(sciezka, ios::in);
@@ -150,21 +151,21 @@ string analizaPlikuHTML(string sciezka)
 
         if (linia.find("403. That’s an error.") != std::string::npos)
         {
-            wykrytoBlad("403. That’s an error.", "Znaleziono błąd 403. Oznacza to, że proawdopodobnie Google zablokowało pobieranie SERP z powodu polityki firmy");
+            wykryto_błąd("403. That’s an error.", "Znaleziono błąd 403. Oznacza to, że proawdopodobnie Google zablokowało pobieranie SERP z powodu polityki firmy");
 
             plik.close();
             exit(0);
         }
         if (linia.find("400. That’s an error.") != std::string::npos)
         {
-            wykrytoBlad("400. That’s an error.", "Znaleziono błąd 400. Serwer nie może przetworzyć żądania, ponieważ jest zniekształcone. Nie należy próbować ponownie.");
+            wykryto_błąd("400. That’s an error.", "Znaleziono błąd 400. Serwer nie może przetworzyć żądania, ponieważ jest zniekształcone. Nie należy próbować ponownie.");
 
             plik.close();
             exit(0);
         }
         if (linia.find("302 Moved") != std::string::npos)
         {
-            wykrytoBlad("302 Moved", "Znaleziono błąd 302. Dokument został przeniesiony.");
+            wykryto_błąd("302 Moved", "Znaleziono błąd 302. Dokument został przeniesiony.");
 
             plik.close();
             exit(0);
@@ -179,7 +180,7 @@ string analizaPlikuHTML(string sciezka)
                 while(nPos != string::npos)
                 {cout<<"Test 3 pass"<<endl;
                     count++;
-                    typWyniku = jakiTypWynikuSERP(linia,nPos);
+                    typWyniku = jaki_typ_wyniku_serp(linia,nPos);
                     if(typWyniku==1)
                     {
                         mapSERPnumber++;
@@ -198,32 +199,32 @@ string analizaPlikuHTML(string sciezka)
                         mainSERPnumber++;
                         newSERPnumber = mainSERPnumber;
                     }
-                    wynikSERPstream << wypiszNaglowekWynikuSERP(nPos, linia, newSERPnumber, SERPgoogle, SERPgoogleMaps) << endl;
+                    wynikSERPstream << wypisz_nagłówek_wyniku_serp(nPos, linia, newSERPnumber, SERPgoogle, SERPgoogleMaps) << endl;
 
                     nPos = linia.find(SERPgoogle, nPos + 1);
                 }
         }
-        else nr_linii++;cout<<"Test 5 pass"<<endl;
+        else nr_linii++;
     }cout<<"Test 6 pass"<<endl;
     wynikSERPstream << endl << "Wszystkich wyników: " << mainSERPnumber << endl;
     wynikSERP = wynikSERPstream.str();
-    cout<<"Test 7 pass"<<endl;
+
     plik.close();
-    cout<<"Test 8 pass"<<endl;
+
     system("clear");
     return wynikSERP;
 
 }
 
-void wykrytoBlad(string blad, string opis)
+void wykryto_błąd(string blad, string opis)
 {
     cout << "Wykryto błąd!" << endl << "Bląd: " << blad << endl << opis << endl << endl;
     exit(0);
 }
 
-string wypiszNaglowekWynikuSERP(size_t pozycja, string linia, int numerSERP, string znacznikGoogleSERP, string znacznikGoogleMapsSERP)
-{cout<<"Test 3-5-1 pass"<<endl;
-    int typWynnikuSERP = jakiTypWynikuSERP(linia, pozycja);
+string wypisz_nagłówek_wyniku_serp(size_t pozycja, string linia, int numerSERP, string znacznikGoogleSERP, string znacznikGoogleMapsSERP)
+{
+    int typWynnikuSERP = jaki_typ_wyniku_serp(linia, pozycja);
     int iloscZnakowDoFrazy = 60;
     size_t nPos = pozycja+iloscZnakowDoFrazy;
     string textHTML = linia.substr(nPos, 200);
@@ -234,35 +235,35 @@ string wypiszNaglowekWynikuSERP(size_t pozycja, string linia, int numerSERP, str
     string textHTML_link;
     string textHTML_link_2;
     string link;
-cout<<"Test 3-5-2 pass"<<endl;
+
     if(typWynnikuSERP==1)
-    {cout<<"Test 3-5-3 pass"<<endl;
+    {
         if(numerSERP==1)
-        {cout<<"Test 3-5-3-1 pass"<<endl;
+        {
             textNaglowekSERPstream << "------Wyniki z Google maps------\n" << numerSERP << ".: "<< "Wyniki z Google maps: " << textHTML;
         }
         else if(numerSERP==3)
-        {cout<<"Test 3-5-3-2 pass"<<endl;
+        {
             textNaglowekSERPstream << numerSERP << ".: "<< "Wyniki z Google maps: " << textHTML << "\n--------------------------------";
         }
         else
-        {cout<<"Test 3-5-3-3 pass"<<endl;
+        {
             textNaglowekSERPstream << numerSERP << ".: "<< "Wyniki z Google maps: " << textHTML;
         }
-cout<<"Test 3-5-4 pass"<<endl;
+
         textNaglowekSERP = textNaglowekSERPstream.str();
         return(textNaglowekSERP);
 
     }
 
     if(typWynnikuSERP==2)
-    {cout<<"Test 3-5-6 pass"<<endl;
+    {
         textNaglowekSERPstream << "----Informacja z Wikipedii----\n Wynik z Wikipedii: " << textHTML << "\n------------------------------";
         textNaglowekSERP = textNaglowekSERPstream.str();
         return(textNaglowekSERP);
     }
     if(typWynnikuSERP==3)
-    {cout<<"Test 3-5-7 pass"<<endl;
+    {
         textNaglowekSERPstream << "-----Informacja-----\n Wynik: " << textHTML << "\n--------------------";
         textNaglowekSERP = textNaglowekSERPstream.str();
         return(textNaglowekSERP);
@@ -278,9 +279,9 @@ cout<<"Test 3-5-4 pass"<<endl;
             textNaglowekSERPstream << "Wynik [" << numerSERP << "]: " << textHTML << endl;
         }
 
-        textNaglowekSERPstream << "OPIS STRONY: " << endl << wypiszWarstwyStrony(pozycja, linia) << endl;cout<<"Test 3-8-8-3 pass"<<endl;
-        link = wypiszLink(pozycja, linia);cout<<"Test 3-8-8-4 pass"<<endl;
-        textNaglowekSERPstream << "WARSTWY STRONY: "<< endl << wypiszWarstwyStronyPoprawione(link);cout<<"Test 3-8-8-5 pass"<<endl;
+        textNaglowekSERPstream << "OPIS STRONY: " << endl << wypisz_warstwy_strony(pozycja, linia) << endl;cout<<"Test 3-8-8-3 pass"<<endl;
+        link = wypisz_link(pozycja, linia);cout<<"Test 3-8-8-4 pass"<<endl;
+        textNaglowekSERPstream << "WARSTWY STRONY: "<< endl << wypisz_warstwy_srony_poprawione(link);cout<<"Test 3-8-8-5 pass"<<endl;
 
         textNaglowekSERPstream << "LINK: " << link << endl;cout<<"Test 3-8-8-6 pass"<<endl;
         textNaglowekSERPstream << "--------------------------------";
@@ -290,7 +291,7 @@ cout<<"Test 3-5-4 pass"<<endl;
     }
     cout<<"Test 3-8-10 pass"<<endl;
 }
-string wypiszLink(size_t pozycja, string linia)
+string wypisz_link(size_t pozycja, string linia)
 {
     cout<<"Test 3-8-8-3-1 pass"<<endl;
     size_t nPos;
@@ -373,7 +374,7 @@ string wypiszLink(size_t pozycja, string linia)
 
 }
 
-string wypiszWarstwyStrony(size_t pozycja2, string linia)
+string wypisz_warstwy_strony(size_t pozycja2, string linia)
 {
     string strona[10];
     int iloscZnakowDoFrazy = 60;
@@ -473,7 +474,7 @@ string wypiszWarstwyStrony(size_t pozycja2, string linia)
 
 }
 
-string wypiszWarstwyStronyPoprawione(string link)
+string wypisz_warstwy_srony_poprawione(string link)
 {
     size_t nPos;
     size_t nPos2;
@@ -520,7 +521,7 @@ string wypiszWarstwyStronyPoprawione(string link)
 
 }
 
-int funkcjaNumerSERP(bool czyToMapa, int numerSERP, int numerSERPgmaps)
+int funkcja_numer_serp(bool czyToMapa, int numerSERP, int numerSERPgmaps)
 {
     if(czyToMapa==true)
     {
@@ -534,7 +535,7 @@ int funkcjaNumerSERP(bool czyToMapa, int numerSERP, int numerSERPgmaps)
     }
 }
 
-int jakiTypWynikuSERP(string linia, size_t pozycja)
+int jaki_typ_wyniku_serp(string linia, size_t pozycja)
 {
     size_t nPos = pozycja;
     string sprawdzanyLancuch;
@@ -582,7 +583,7 @@ int jakiTypWynikuSERP(string linia, size_t pozycja)
     }
     else
     {
-        wykrytoBlad("Typ wyniku SERP się niezgadza.", "Coś poszło nie tak, sprawdź funkcje wykrywania typów wyniku SERP. Google mógl spowodować zmiany w kodzie, zaaktualizuj program.");
+        wykryto_błąd("Typ wyniku SERP się niezgadza.", "Coś poszło nie tak, sprawdź funkcje wykrywania typów wyniku SERP. Google mógl spowodować zmiany w kodzie, zaaktualizuj program.");
         return 0;
     }
  return 0;

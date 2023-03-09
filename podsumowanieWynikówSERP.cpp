@@ -5,15 +5,24 @@
 #include <filesystem>
 #include <cstdlib>
 #include <time.h>
+#include <filesystem>
+
 #include "analiza_pliku_google_SERP.h"
-
 #include "podsumowanieWynikówSERP.h"
+#include "globals.h"
 
+namespace fs = std::filesystem;
 
-
-
-void przygDoPorowStronSERP(string plikSERP)
+bool czy_plik_jest_pusty(const string& nazwaPliku)
 {
+    std::ifstream plik(nazwaPliku);
+    return plik.peek() == ifstream::traits_type::eof();
+}
+
+
+void przyg_do_porow_stron_serp(string plikSERP)
+{
+
     char ch;
     fstream plik;
 
@@ -23,19 +32,43 @@ void przygDoPorowStronSERP(string plikSERP)
         cout << "Plik nie istnieje!" << endl;
         exit(0);
     }
-    plik<<analizaPlikuHTML;
-    plik.close();
+    else
+    {
 
-    cout<<"Wyniki GOOGLE SERP są gotowe."<<endl<<endl<<"Wciśnij klawisz abu kontynuować."<<endl;
-    ch=getchar();
+        //plik<<analizaPlikuHTML;
+        plik<<analizaSERP;//<--TUTAJ!!!
+        plik.close();
 
-    system("clear");
-    cout<<"Pobieram pliki..."<<endl;
+        cout<<"Wyniki GOOGLE SERP są gotowe."<<endl
+            <<endl<<"Pobrać wyniki organiczne, w celu przeanalizowania ich? Wcinij t, aby potwierdzić lub n, aby zakończyć działanie programu (t/n): ";
+        bool czyPobieraćWynikiOrganiczne;
+        if(czyWykonacAutomatyzacje==true)
+        {
+            czyPobieraćWynikiOrganiczne = true;
+        }
+        else
+        {
+            czyPobieraćWynikiOrganiczne = czy_tak_lub_nie(wypisuje_znak_tak_lub_nie());
+        }
+        //ch=getchar();
+        if(czyPobieraćWynikiOrganiczne==true)
+        {
+            system("clear");
+            cout<<"Pobieram pliki..."<<endl;
+        }
+        else
+        {
+            cout<<"Nie pobieram plików HTML stron wynikowych SERP. Przeanalizowana strona wynikowa Google znajduje się w pliku teksotwym, w plikach programu."<<endl<<"Zamykam program.";
+            exit(0);
+        }
 
+
+
+    }
 
 }
 
-void pobieranieStronHTMLzSERP()
+void pobieranie_stron_html_z_serp()
 {
     fstream plik;
     string linia[200], linkDoStrony[15], wczytanaLinia, nazwaPobranegoPliku;
@@ -45,56 +78,64 @@ void pobieranieStronHTMLzSERP()
     int nr_linii=0, nr_liku=1;
     size_t pozycja;
 
-
+    fs::create_directories("./wyszukane_strony_google");
+    fs::create_directories("./pobrane_strony/");
     plik.open("./wyszukane_strony_google/przeanalizowane_wyniki_serp.txt", ios::in);
     if(plik.good()==false)
     {
         cout << "Plik nie istnieje!" << endl;
         exit(0);
     }
-
-    while(getline(plik, wczytanaLinia))
+    else
     {
-        linia[nr_linii] = wczytanaLinia;
-        if(linia[nr_linii].substr(0,4)=="LINK")
+        while(getline(plik, wczytanaLinia))
         {
-            linia[nr_linii] = linia[nr_linii].substr(6,300);
-            linkDoStrony[nr_liku] = linia[nr_linii];
-
-            cout<<"Pobieram : "<<linkDoStrony[nr_liku]<<endl;
-            cout<<"nr_wyniku: "<<nr_liku<<endl;
-
-            for(int i=0; i<zakazaneZnakiRozmiar; i++)
+            linia[nr_linii] = wczytanaLinia;
+            if(linia[nr_linii].substr(0,4)=="LINK")
             {
-                pozycja = linkDoStrony[nr_liku].find(zakazaneZnaki[i]);
-                while (pozycja!=string::npos)
+                system("clear");
+                linia[nr_linii] = linia[nr_linii].substr(6,300);
+                linkDoStrony[nr_liku] = linia[nr_linii];
+
+                cout<<"Pobieram : "<<linkDoStrony[nr_liku]<<endl;
+                cout<<"nr_wyniku: "<<nr_liku<<endl;
+
+                for(int i=0; i<zakazaneZnakiRozmiar; i++)
                 {
-                    cout<<"Znaleziono niedozwolony znak. "<<"Pozcyja: "<<pozycja<<endl;
-                    linkDoStrony[nr_liku].insert(pozycja, "\\");
-                    cout<<"Nowy link : "<<linkDoStrony[nr_liku]<<endl;
-                    pozycja = linkDoStrony[nr_liku].find(zakazaneZnaki[i], pozycja+2);
+                    pozycja = linkDoStrony[nr_liku].find(zakazaneZnaki[i]);
+                    while (pozycja!=string::npos)
+                    {
+                        cout<<"Znaleziono niedozwolony znak. "<<"Pozcyja: "<<pozycja<<endl;
+                        linkDoStrony[nr_liku].insert(pozycja, "\\");
+                        cout<<"Nowy link : "<<linkDoStrony[nr_liku]<<endl;
+                        pozycja = linkDoStrony[nr_liku].find(zakazaneZnaki[i], pozycja+2);
+                    }
                 }
+
+                nazwaPobranegoPlikuStr << "wynikSERPnr_" << nr_liku << ".html";
+                nazwaPobranegoPliku = nazwaPobranegoPlikuStr.str();
+
+                pobier_strone_www(linkDoStrony[nr_liku], "./pobrane_strony/", nazwaPobranegoPliku);
+                nazwaPobranegoPlikuStr.str("");
+
+                nr_liku++;
+            }
+            else
+            {
+                //system("clear");
+                //cout<<"I: nie znalezino linku do pobrania. "<<endl;
+                nr_linii++;
             }
 
-            nazwaPobranegoPlikuStr << "wynikSERPnr_" << nr_liku << ".html";
-            nazwaPobranegoPliku = nazwaPobranegoPlikuStr.str();
-            pobierzStroneWWW(linkDoStrony[nr_liku], "./PobraneStrony/", nazwaPobranegoPliku);
-            nazwaPobranegoPlikuStr.str("");
-            nr_liku++;
         }
-
-        nr_linii++;
-
     }
 
     plik.close();
 
-    //cout<<"ls -l ./PobraneStrony/"<<endl;
-    //system("ls -l ./PobraneStrony/");
 
 }
 
-string podsumowanieWynikowSERP(string frazaGlowna, int nr_PlikuDoAnalizy)
+string podsumowanie_wyników_serp(string frazaGlowna, int nr_PlikuDoAnalizy)
 {
 
     fstream plik_z_frazami_do_wyszukania;
@@ -157,10 +198,10 @@ string podsumowanieWynikowSERP(string frazaGlowna, int nr_PlikuDoAnalizy)
         sciezkaDoPlikuStream.str("");
 
 
-        sciezkaDoPlikuStream << "./PobraneStrony/wynikSERPnr_" << nr_pliku << ".html";
+        sciezkaDoPlikuStream << "./pobrane_strony/wynikSERPnr_" << nr_pliku << ".html";
         sciezkaDoPliku = sciezkaDoPlikuStream.str();
 
-        string cialoStrony = wypiszCialoStrony(sciezkaDoPliku);
+        string cialoStrony = wypisz_cialo_strony(sciezkaDoPliku);
 
 
         int ilewPlikuFraz=0, ileKeywords=0;
@@ -196,72 +237,74 @@ string podsumowanieWynikowSERP(string frazaGlowna, int nr_PlikuDoAnalizy)
         if(plik.good())
         {
 
-            int iloscSlowFrazy = iloscSlowWiekszychNizDwieLiterki(frazaDoWyszukania[0]);
-            for(int k=1;k<=iloscSlowFrazy;k++)ilosc_tylkoBody[0] = ilosc_tylkoBody[0] + ilosc_frazy_w_fragmencie(cialoStrony, wyjmijSlowo_o_numerze(frazaDoWyszukania[0],k));
+            int iloscSlowFrazy = ilosc_slow_wiekszych_niz_dwie_literki(frazaDoWyszukania[0]);
+            for(int k=1;k<=iloscSlowFrazy;k++)ilosc_tylkoBody[0] = ilosc_tylkoBody[0] + ilosc_frazy_w_fragmencie(cialoStrony, wyjmij_slowo_o_numerze(frazaDoWyszukania[0],k));
             //ilosc_tylkoBody[0] = ilosc_frazy_w_fragmencie(cialoStrony, frazaDoWyszukania[0]);// liczy ilosc frazy gł. w <body>
 
-            sStream << endl << endl << endl << "-------DANE Z WYNIKU SERP NR ["<< nr_pliku << "]-------" << endl;
+            sStream << endl << endl << endl << "        DANE Z WYNIKU SERP NR: "<< nr_pliku << endl;
             //CZŚCI LINKU
-            linkStrony = wypiszLinkzPlikuPrzeanalizowanychSERP(nr_pliku);
+            linkStrony = wypisz_link_z_pliku_przeanalizowanych_wyników_serp(nr_pliku);
             int inloscCzesciLinku = ilosc_frazy_w_fragmencie(linkStrony,"/")-1;
             int ilewPlikuFraz_h[iloscNaglowkow_h];
             if(linkStrony[(linkStrony.length())-1]=='/')inloscCzesciLinku--;
             string naglowek, czescLinku[inloscCzesciLinku];///TUUTAJJJ!!!
             string znacznikMetaDescription;
 
-            znacznikMetaDescription = znajdzWypiszFrazeMeta("name=\"keywords\"", sciezkaDoPliku);
-            slowaKlucze = wypiszZawartoscArgumentuzZnacznika(znacznikMetaDescription, "content");
+            znacznikMetaDescription = znajdz_wypisz_fraze_meta("name=\"keywords\"", sciezkaDoPliku);
+            slowaKlucze = wypisz_zawartość_argumentu_z_znacznika(znacznikMetaDescription, "content");
             ileKeywords = ile_slow_kluczy(slowaKlucze);
             string slowoKlucz[ileKeywords];
 
 
             sStream<<"Link: "<<linkStrony<<endl;
 
-            for(int k=1;k<=iloscSlowFrazy;k++)ilosc_link[0] = ilosc_link[0] + ilosc_frazy_w_fragmencie(linkStrony, wyjmijSlowo_o_numerze(frazaDoWyszukania[0],k));
+            for(int k=1;k<=iloscSlowFrazy;k++)ilosc_link[0] = ilosc_link[0] + ilosc_frazy_w_fragmencie(linkStrony, wyjmij_slowo_o_numerze(frazaDoWyszukania[0],k));
             //ilosc_link[0] = ilosc_frazy_w_fragmencie(linkStrony,frazaDoWyszukania[0]);
 
             nrCzesciLinku=0;
             while(czescLinku[nrCzesciLinku].substr(0,7) != "Błąd!")
             {
 
-                czescLinku[nrCzesciLinku] = wypiszCzesciLinku(nr_pliku,nrCzesciLinku);
-                sStream<<"Część linku ["<<nrCzesciLinku<<"]: "<<czescLinku[nrCzesciLinku]<<endl;
+                czescLinku[nrCzesciLinku] = wypisz_czesci_linku(nr_pliku,nrCzesciLinku);
+                //CZĘŚCI LINKU: WYŁĄCZONE DO WYPISANIA
+                //sStream<<"Część linku ["<<nrCzesciLinku<<"]: "<<czescLinku[nrCzesciLinku]<<endl;
                 ilosc_tylkoBody[2]  = ilosc_tylkoBody[2]    + ilosc_frazy_w_fragmencie(cialoStrony, czescLinku[nrCzesciLinku]);
                 ilosc_opis[2]  = ilosc_opis[2]    + ilosc_frazy_w_fragmencie(opis, czescLinku[nrCzesciLinku]);
                 nrCzesciLinku++;
-                czescLinku[nrCzesciLinku] = wypiszCzesciLinku(nr_pliku,nrCzesciLinku); //TU JEST BŁĄĄĄĄD!!!
+                czescLinku[nrCzesciLinku] = wypisz_czesci_linku(nr_pliku,nrCzesciLinku); //TU JEST BŁĄĄĄĄD!!!
 
 
             }
 
             sStream<<"Ilość części linku: "<<nrCzesciLinku<<endl;
+            sStream<<"Błąd lub przekierowanie: "<<czy_plik_jest_pusty(sciezkaDoPliku)<<endl;
             for(int i=0; i<iloscFraz; i++)
             {
                 ilosc_h[1][1] = 0;
                 ilewPlikuFraz = ilosc_frazy_w_pliku(frazaDoWyszukania[i], sciezkaDoPliku);
                 nrNaglowka=1;
-                sStream  << "Element: " << frazaDoWyszukania[i] << " | " << "Znaleziono elemetnów: "<<ilewPlikuFraz<<endl;
+                sStream  << "Element " << frazaDoWyszukania[i] << " | " << "Znaleziono elemetnów: "<<ilewPlikuFraz<<endl;
 
                 //WYPISYWANIE OPIS
                 if((frazaDoWyszukania[i]=="name=\"description") && (ilewPlikuFraz>0))
                 {
 
-                    znacznikMetaDescription = znajdzWypiszFrazeMeta("name=\"description", sciezkaDoPliku);
-                    opis = wypiszZawartoscArgumentuzZnacznika(znacznikMetaDescription, "content");
+                    znacznikMetaDescription = znajdz_wypisz_fraze_meta("name=\"description", sciezkaDoPliku);
+                    opis = wypisz_zawartość_argumentu_z_znacznika(znacznikMetaDescription, "content");
 
-                    for(int k=1;k<=iloscSlowFrazy;k++)ilosc_opis[0] = ilosc_opis[0] + ilosc_frazy_w_fragmencie(opis, wyjmijSlowo_o_numerze(frazaDoWyszukania[0],k));
+                    for(int k=1;k<=iloscSlowFrazy;k++)ilosc_opis[0] = ilosc_opis[0] + ilosc_frazy_w_fragmencie(opis, wyjmij_slowo_o_numerze(frazaDoWyszukania[0],k));
 
                     //ilosc_opis[0] = ilosc_frazy_w_fragmencie(opis,frazaDoWyszukania[0]);
-
-                    sStream<< "      " <<"Opis: "<< opis << endl;
+                    //WYŁĄCZYONYE WYPISYWANIE OPISU
+                    //sStream<< "      " <<"Opis: "<< opis << endl;
                     if((opis.find("I:")!=string::npos) && (ilewPlikuFraz>1))sStream<< "      "  << "I: Autor wstawił pusty lub nieprawidlowy opis oraz jest więcej niż jedna descripcje. "<< endl;
                     else if(opis=="") sStream << "I: Autor wstawił pusty opis. "<<endl;
                 }
 
                 //WYPISYWANIE KEYWORDS
 
-                //znacznikMetaDescription = znajdzWypiszFrazeMeta("name=\"keywords\"", sciezkaDoPliku);
-                //slowaKlucze = wypiszZawartoscArgumentuzZnacznika(znacznikMetaDescription, "content");
+                //znacznikMetaDescription = znajdz_wypisz_fraze_meta("name=\"keywords\"", sciezkaDoPliku);
+                //slowaKlucze = wypisz_zawartość_argumentu_z_znacznika(znacznikMetaDescription, "content");
                 //ileKeywords = ile_slow_kluczy(slowaKlucze);
                 //string slowoKlucz[ileKeywords];
 
@@ -271,18 +314,19 @@ string podsumowanieWynikowSERP(string frazaGlowna, int nr_PlikuDoAnalizy)
                     int nrSlowaKluczowego;
                     int iloscSLowKluczy = ile_slow_kluczy(slowaKlucze);
 
-                    for(int k=1;k<=iloscSlowFrazy;k++)ilosc_slowaKluczowe[0] = ilosc_slowaKluczowe[0] + ilosc_frazy_w_fragmencie(slowaKlucze, wyjmijSlowo_o_numerze(frazaDoWyszukania[0],k));
+                    for(int k=1;k<=iloscSlowFrazy;k++)ilosc_slowaKluczowe[0] = ilosc_slowaKluczowe[0] + ilosc_frazy_w_fragmencie(slowaKlucze, wyjmij_slowo_o_numerze(frazaDoWyszukania[0],k));
 
                     nrSlowaKluczowego = 0;
                     //if(iloscSLowKluczy<=15)
                     //{
-                        if(iloscSLowKluczy<=15)sStream<< "      " <<"Słowa kluczowe("<<iloscSLowKluczy<<"): " << endl;
+                        //WYPISUJE SŁOWA KLUCZOWE:
+                        //if(iloscSLowKluczy<=15)sStream<< "      " <<"Słowa kluczowe("<<iloscSLowKluczy<<"): " << endl;
                         while(nrSlowaKluczowego<ileKeywords)
                         {
 
-                            slowoKlucz[nrSlowaKluczowego]=wypiszSlowoKlucz(slowaKlucze,nrSlowaKluczowego);
+                            slowoKlucz[nrSlowaKluczowego]=wypisz_słowo_klucz(slowaKlucze,nrSlowaKluczowego);
                             // WYPISUJE SLOWA KLUCZE:
-                            if(iloscSLowKluczy<=15)sStream<< "      " <<"slowo klucz nr "<< nrSlowaKluczowego+1 << ": " <<slowoKlucz[nrSlowaKluczowego]<<endl;
+                            //if(iloscSLowKluczy<=15)sStream<< "      " <<"slowo klucz nr "<< nrSlowaKluczowego+1 << ": " <<slowoKlucz[nrSlowaKluczowego]<<endl;
                             //ilosc_tylkoBody[1] = ilosc_tylkoBody + ilosc_frazy_w_fragmencie(cialoStrony,slowoKlucz[nrSlowaKluczowego]);
                             ilosc_tylkoBody[1]  = ilosc_tylkoBody[1]    + ilosc_frazy_w_fragmencie(cialoStrony, slowoKlucz[nrSlowaKluczowego]);
                             ilosc_opis[1]       = ilosc_opis[1]         + ilosc_frazy_w_fragmencie(opis,        slowoKlucz[nrSlowaKluczowego]);
@@ -293,7 +337,8 @@ string podsumowanieWynikowSERP(string frazaGlowna, int nr_PlikuDoAnalizy)
 
                         }
                     //}
-                    if(iloscSLowKluczy>15) sStream<< "      " <<"Słowa kluczowe("<<iloscSLowKluczy<<"): "<< slowaKlucze << endl;// <-- WYPISYWANIE SŁÓW KLUCZOWYCH W JEDNYM CIĄGU
+                    //WYPISUJE SŁOWAKLUCZOWE:
+                    //if(iloscSLowKluczy>15) sStream<< "      " <<"Słowa kluczowe("<<iloscSLowKluczy<<"): "<< slowaKlucze << endl;// <-- WYPISYWANIE SŁÓW KLUCZOWYCH W JEDNYM CIĄGU
 
                 }
 
@@ -318,7 +363,7 @@ string podsumowanieWynikowSERP(string frazaGlowna, int nr_PlikuDoAnalizy)
                         while(nr_wypisywanegoNaglowka<=ilewPlikuFraz)
                         {
 
-                            naglowekDoWypisania[nr_wypisywanegoNaglowka][nrNaglowka] = wypiszZawartoscNaglowka(nrNaglowka,cialoStrony, nr_wypisywanegoNaglowka, ilewPlikuFraz);
+                            naglowekDoWypisania[nr_wypisywanegoNaglowka][nrNaglowka] = wypisz_zawartosc_naglowka(nrNaglowka,cialoStrony, nr_wypisywanegoNaglowka, ilewPlikuFraz);
                             streamNaglowki << naglowekDoWypisania[nr_wypisywanegoNaglowka][nrNaglowka];
                             //sStream << "Nagowek [" << nr_wypisywanegoNaglowka << "]: " << naglowekDoWypisania[nr_wypisywanegoNaglowka][nrNaglowka] <<endl;
 
@@ -330,7 +375,7 @@ string podsumowanieWynikowSERP(string frazaGlowna, int nr_PlikuDoAnalizy)
 
                         for(int k=1;k<=iloscSlowFrazy;k++)
                         ilosc_h[nrNaglowka][0]   = ilosc_h[nrNaglowka][0] +
-                                                   ilosc_frazy_w_fragmencie(streamNaglowki.str(), wyjmijSlowo_o_numerze(frazaDoWyszukania[0],k));
+                                                   ilosc_frazy_w_fragmencie(streamNaglowki.str(), wyjmij_slowo_o_numerze(frazaDoWyszukania[0],k));
 
                         if(ileKeywords>1)
                         for(int m=0;m<ileKeywords;m++)
@@ -358,7 +403,7 @@ string podsumowanieWynikowSERP(string frazaGlowna, int nr_PlikuDoAnalizy)
 
             sStream << "-------WYNIKI PODSUMOWUJĄCE NR "<< nr_pliku <<" SERP ZAWIERA-------"<<endl<<endl;
             for(int l=0;l<iloscTypowPodsumowania;l++)
-            sStream<<wypiszObliczeniaPodsumowania
+            sStream<<wypisz_obliczenia_podsumowania
                 (
                     l,nr_pliku,ilosc_tylkoBody[l],
                     ilosc_opis[l],
@@ -368,7 +413,7 @@ string podsumowanieWynikowSERP(string frazaGlowna, int nr_PlikuDoAnalizy)
                 )
             <<endl;
 
-            //sStream<<wypiszObliczeniaPodsumowania(1,nr_pliku,ilosc_tylkoBody[1],ilosc_opis[1],ilosc_slowaKluczowe[1],ilosc_link[1],ilosc_h[1][1],ilosc_h[2][1],ilosc_h[3][1],ilosc_h[4][1],ilosc_h[5][1],ilosc_h[6][1])<<endl;
+            //sStream<<wypisz_obliczenia_podsumowania(1,nr_pliku,ilosc_tylkoBody[1],ilosc_opis[1],ilosc_slowaKluczowe[1],ilosc_link[1],ilosc_h[1][1],ilosc_h[2][1],ilosc_h[3][1],ilosc_h[4][1],ilosc_h[5][1],ilosc_h[6][1])<<endl;
             s = sStream.str();
 
             plik.close();
@@ -466,7 +511,7 @@ int ile_plikow_html()
     return iloscPlikow;
 }
 
-string znajdzWypiszFrazeMeta(string fraza, string sciezkaDoPliku)
+string znajdz_wypisz_fraze_meta(string fraza, string sciezkaDoPliku)
 {
     size_t nPos=0, nPos2=0, pozycjaEW=0;
     int liczbaWyszukiwan=0;
@@ -571,7 +616,7 @@ int ile_slow_kluczy(string slowaKlucze)
     return n+1;
 }
 
-string wypiszSlowoKlucz(string lancuchSlowKluczy, int nrSlowaKlucz)
+string wypisz_słowo_klucz(string lancuchSlowKluczy, int nrSlowaKlucz)
 {
     string slowoKlucz;
     int n=0,i;
@@ -595,7 +640,7 @@ string wypiszSlowoKlucz(string lancuchSlowKluczy, int nrSlowaKlucz)
     return slowoKlucz;
 }
 
-string wypiszCialoStrony(string sciezkaDoPliku)
+string wypisz_cialo_strony(string sciezkaDoPliku)
 {
     fstream plik;
     string linia, calyPlikTekst, frazaPocz="<body", frazaKon="</body", wynik;
@@ -628,7 +673,7 @@ string wypiszCialoStrony(string sciezkaDoPliku)
 }
 
 
-string wypiszZawartoscNaglowka(int nrNaglowka, string cialoStronyDoPrzeszukania, int nrSzukanegoNaglowka, int iloscZnalezionychNaglowkow)
+string wypisz_zawartosc_naglowka(int nrNaglowka, string cialoStronyDoPrzeszukania, int nrSzukanegoNaglowka, int iloscZnalezionychNaglowkow)
 {
     string frazaPoczDoWyszukania, frazaKoczDoWyszukania, wynik, znalezionyNaglokow[iloscZnalezionychNaglowkow];
     stringstream stream;
@@ -685,7 +730,7 @@ string wypiszZawartoscNaglowka(int nrNaglowka, string cialoStronyDoPrzeszukania,
 }
 
 
-string wypiszLinkzPlikuPrzeanalizowanychSERP(int numerPliku)
+string wypisz_link_z_pliku_przeanalizowanych_wyników_serp(int numerPliku)
 {
     fstream plik;
     string linia[200], linkDoStrony[15], wczytanaLinia, nazwaPobranegoPliku;
@@ -727,7 +772,7 @@ string wypiszLinkzPlikuPrzeanalizowanychSERP(int numerPliku)
 }
 
 
-string wypiszCzesciLinku(int nrWynikuSERP, int nr_warstwyLinku)
+string wypisz_czesci_linku(int nrWynikuSERP, int nr_warstwyLinku)
 {
     fstream plik;
     string linia, liniaPliku[150], liniaWyniku, wynik;
@@ -756,64 +801,86 @@ string wypiszCzesciLinku(int nrWynikuSERP, int nr_warstwyLinku)
     return wynik;
 }
 
-void proceduraWypisywaniaPodsumowaniaSERP(string frazaGlownaSERP)
+void procedura_wypisywania_podsumowania_serp(string frazaGlownaSERP)
 {
     string frazaGoogleSERP=frazaGlownaSERP, wynikuPlikuSERP, sciezkaPlikuDocelowego;
     stringstream sStream;
     fstream plik;
     int ilePlikow = ile_plikow_html();
     char ch;
-    cout<<"Czy wypisać szczegółowe wyniki dla każdego wyniku oddzielnie? "<<endl; //tutaj X
-    bool czyWypisacWynikiSzczegolowo = czyTakLubNie(wypisujeZnakTakLubNie());
+    cout<<"Czy przeanalizować i wypisać szczegółowe wyniki dla każdego wyniku oddzielnie? "<<endl; //tutaj X
+    bool czyWypisacWynikiSzczegolowo;
+    if(czyWykonacAutomatyzacje==true)
+    {
+        czyWypisacWynikiSzczegolowo = true;
+    }
+    else
+    {
+        czyWypisacWynikiSzczegolowo = czy_tak_lub_nie(wypisuje_znak_tak_lub_nie());
+    }
     system("clear");
 
-
+    fs::create_directories("./ostatnie_analizy_stron");
     for(int i=1; i<=ilePlikow; i++)
     {
-        wynikuPlikuSERP = podsumowanieWynikowSERP(frazaGoogleSERP, i);
-        if(czyWypisacWynikiSzczegolowo== true) cout << wynikuPlikuSERP;
-        else
+        wynikuPlikuSERP = podsumowanie_wyników_serp(frazaGoogleSERP, i);
+        if(czyWypisacWynikiSzczegolowo== true)
         {
-            cout<<"Nie wypisuje wyników, kończę program..."<<endl;
-            exit(0);
-        }
-        sStream.str("");sStream<<"./PobraneStrony/Analizy_Stron/wynikuAnalizyPlikuHTMLnr_"<<i<<".txt";
-        sciezkaPlikuDocelowego=sStream.str(); sStream.str("");
-        plik.open(sciezkaPlikuDocelowego,ios::out);
-            plik<<wynikuPlikuSERP;
-        plik.close();
 
-        if(czyWypisacWynikiSzczegolowo==true)
-        {
+            cout << wynikuPlikuSERP;
+            sStream.str("");sStream<<"./ostatnie_analizy_stron/wyniku_analizypliku_HTML_nr_"<<i<<".txt";
+            sciezkaPlikuDocelowego=sStream.str(); sStream.str("");
+            plik.open(sciezkaPlikuDocelowego,ios::out);
+                plik<<wynikuPlikuSERP;
+            plik.close();
+
+
             if(i<ilePlikow)
             {
-                cout << endl << "Odczytano plik wyniku " << i << ". " << endl << "Wciśnij ENTER by przejść do analizy następnego wyniku..." << endl;
-                getchar();
+                if(czyWykonacAutomatyzacje==false)
+                {
+                    cout << endl << "Odczytano plik wyniku " << i << ". " << endl << "Wciśnij ENTER by przejść do analizy następnego wyniku..." << endl;
+                    getchar();
+                }
                 system("clear");
             }
             else if(i==ilePlikow)
             {
-                cout << endl << "To już ostatnia szczegółowa Analiza Pliku SERP. Wciśnij ENTER, by przejść do ogólnego podsumowania." << endl;
-                ch=getchar();
+                if(czyWykonacAutomatyzacje==false)
+                {
+                    cout << endl << "To już ostatnia szczegółowa Analiza Pliku SERP. Wciśnij ENTER, by przejść do ogólnego podsumowania." << endl;
+                    ch=getchar();
+                }
                 system("clear");
             }
+
+        }
+        else
+        {
+            cout<<"Nie wypisuje wyników i pliki nie zostały przeanalizowane. Kończę program..."<<endl;
+            exit(0);
+        }
+
+        if(czyWypisacWynikiSzczegolowo==true)
+        {
+
         }
     }
 }
 
-bool czyTakLubNie(char odpowiedz)
+bool czy_tak_lub_nie(char odpowiedz)
 {
     odpowiedz = tolower(odpowiedz);
     if((odpowiedz=='t') || (odpowiedz=='n'))
     {
         if(odpowiedz=='t') return true;
         else if(odpowiedz=='n') return false;
-        else wykrytoBlad("Wykryto nieoczekiwany bląd!", "Znak jest niepoprawny. Zamykam probram...");
+        else wykryto_błąd("Wykryto nieoczekiwany bląd!", "Znak jest niepoprawny. Zamykam probram...");
     }
-    else wykrytoBlad("Wpisano nieodpowiedni znak!", "Znak jest niepoprawny. Zamykam probram...");
+    else wykryto_błąd("Wpisano nieodpowiedni znak!", "Znak jest niepoprawny. Zamykam probram...");
 }
 
-char wypisujeZnakTakLubNie()
+char wypisuje_znak_tak_lub_nie()
 {
     char ch, pch;
     int n;
@@ -833,12 +900,12 @@ char wypisujeZnakTakLubNie()
     }
 }
 
-void proceduraWypisywaniaStrumieniowego(string text)
+void procedura_wypisywania_strumieniowego(string text)
 {
     cout << text;
 }
 
-string wypiszObliczeniaPodsumowania
+string wypisz_obliczenia_podsumowania
 (
 int typ,//1=FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: 2=ILOŚĆ SŁÓW KLUCZOWYCH(nr_slow_klucz.) MOŻNA ZNALEŹĆ: 3.ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:
 int nr_pliku,
@@ -860,9 +927,9 @@ int ilosc_h6
     stringstream sStream;
 
     //sStream << "-------WYNIK NR "<< nr_pliku <<" SERP ZAWIERA-------"<<endl;
-    if(typ==0) nazwa = "FRAZĘ WYSZUKIWANIA JEST ZAWARTA W: \n";
-    else if(typ==1) nazwa = "ILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ:\n";
-    else if(typ==2) nazwa = "ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W:\n";
+    if(typ==0) nazwa = "-------FRAZĘ WYSZUKIWANIA JEST ZAWARTA W------- \n";
+    else if(typ==1) nazwa = "-------sILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ-------\n";
+    else if(typ==2) nazwa = "-------ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W-------\n";
     else nazwa = "I: nieznany typ wyniku.";
 
     sStream << nazwa;
@@ -870,18 +937,18 @@ int ilosc_h6
     {
 
         sStream
-        << "tylko w sekcji body:"   << ilosc_tylkoBody      << endl
-        << "słowach kluczowych:"    << ilosc_slowaKluczowe  << endl
-        << "opis:"                  << ilosc_opis           << endl
-        << "link:"                  << ilosc_link           << endl
-        << "nagłówki: h1-" << ilosc_h1 << "; h2-" << ilosc_h2 << "; h3-" << ilosc_h3 << "; h4-" << ilosc_h4 << "; h5-"
-        << ilosc_h5 << "; h6-" << ilosc_h6 << ";" << endl;
+        << "tylko w sekcji body: "   << ilosc_tylkoBody      << endl
+        << "słowach kluczowych: "    << ilosc_slowaKluczowe  << endl
+        << "opis: "                  << ilosc_opis           << endl
+        << "link: "                  << ilosc_link           << endl
+        << "nagłówki h1: " << ilosc_h1 << "\n h2: " << ilosc_h2 << "\n h3: " << ilosc_h3 << "\n h4: " << ilosc_h4 << "\n h5: "
+        << ilosc_h5 << "\n h6: " << ilosc_h6 << endl;
 
     }
     else if(typ==2)
     {
         sStream
-        << "tylko w sekcji body:"   << ilosc_tylkoBody      << endl;
+        << "tylko w sekcji body: "   << ilosc_tylkoBody      << endl;
     }
 
     wynik = sStream.str();
@@ -908,8 +975,8 @@ int ilosc_frazy_w_fragmencie(string fragmentTekstuDoPrzeszukania, string jakiTek
 {
     size_t pozycja;
     int iloscZnalezionejFrazy = 0;
-    fragmentTekstuDoPrzeszukania = toLowerString(fragmentTekstuDoPrzeszukania);
-    jakiTekstLiczyc = toLowerString(jakiTekstLiczyc);
+    fragmentTekstuDoPrzeszukania = to_lower_string(fragmentTekstuDoPrzeszukania);
+    jakiTekstLiczyc = to_lower_string(jakiTekstLiczyc);
     pozycja = fragmentTekstuDoPrzeszukania.find(jakiTekstLiczyc);
 
     while (pozycja != string::npos)
@@ -921,7 +988,7 @@ int ilosc_frazy_w_fragmencie(string fragmentTekstuDoPrzeszukania, string jakiTek
     return iloscZnalezionejFrazy;
 }
 
-string toLowerString(string stringToTransform)
+string to_lower_string(string stringToTransform)
 {
     for (int i=0;i<=stringToTransform.length();i++)
     {
@@ -930,7 +997,7 @@ string toLowerString(string stringToTransform)
     return stringToTransform;
 }
 
-string wypiszZawartoscArgumentuzZnacznika(string znacznikCalosc, string argument)
+string wypisz_zawartość_argumentu_z_znacznika(string znacznikCalosc, string argument)
 {
     size_t pozycja=0;
     string wynik;
@@ -946,7 +1013,7 @@ string wypiszZawartoscArgumentuzZnacznika(string znacznikCalosc, string argument
 }
 
 //WYKLUCZAM "SŁOWA", KTÓRE ZAWIERAJĄ  1-2 ZNAKI
-string wyjmijSlowo_o_numerze(string tekstDoPrzeszukania, int ktoreSlowo)
+string wyjmij_slowo_o_numerze(string tekstDoPrzeszukania, int ktoreSlowo)
 {
 
     //char znakiSpecjalne[30] = {' ', '~', '`', '!', '@', '#', '%', '^', '&', '*', '(', ')', '_', '+', '=', '{', '}', '[', ']', ':', ';', '\"', '\'', '<', ',', '>', '.', '/', '?', '\\'};
@@ -987,7 +1054,7 @@ string wyjmijSlowo_o_numerze(string tekstDoPrzeszukania, int ktoreSlowo)
 }
 
 
-int iloscSlowWiekszychNizDwieLiterki (string tekstDoPrzeszukania)
+int ilosc_slow_wiekszych_niz_dwie_literki(string tekstDoPrzeszukania)
 {
 
     int iloscSlow=0;

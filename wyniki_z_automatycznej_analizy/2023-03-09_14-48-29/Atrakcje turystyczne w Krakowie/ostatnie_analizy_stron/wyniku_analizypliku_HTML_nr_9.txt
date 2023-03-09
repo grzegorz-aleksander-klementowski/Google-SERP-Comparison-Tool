@@ -1,0 +1,70 @@
+
+
+
+        DANE Z WYNIKU SERP NR: 9
+Link: https://101countriesbefore50.com/polska/krakow-na-weekend/
+Ilość części linku: 3
+Błąd lub przekierowanie: 0
+Element Atrakcje turystyczne w Krakowie | Znaleziono elemetnów: 0
+Element name="viewport | Znaleziono elemetnów: 1
+Element name="description | Znaleziono elemetnów: 1
+Element name="keywords | Znaleziono elemetnów: 0
+Element name="robots | Znaleziono elemetnów: 0
+Element property="fb:app_id | Znaleziono elemetnów: 0
+Element property="og: | Znaleziono elemetnów: 10
+Element property="al:android | Znaleziono elemetnów: 0
+Element name="google-site-verification" | Znaleziono elemetnów: 0
+Element rel="canonical | Znaleziono elemetnów: 1
+Element rel="dns-prefetch | Znaleziono elemetnów: 1
+Element rel=”preconnect | Znaleziono elemetnów: 0
+Element rel=”preload | Znaleziono elemetnów: 0
+Element http-equiv="X-UA-Compatible | Znaleziono elemetnów: 1
+Element if lt IE | Znaleziono elemetnów: 1
+Element alt="" | Znaleziono elemetnów: 5
+Element alt=" | Znaleziono elemetnów: 48
+Element captcha | Znaleziono elemetnów: 0
+Element <h1 | Znaleziono elemetnów: 1
+Element <h2 | Znaleziono elemetnów: 4
+Element <h3 | Znaleziono elemetnów: 33
+Element <h4 | Znaleziono elemetnów: 15
+Element <h5 | Znaleziono elemetnów: 2
+Element <h6 | Znaleziono elemetnów: 0
+Element <header> | Znaleziono elemetnów: 0
+Element <section> | Znaleziono elemetnów: 0
+Element <aside> | Znaleziono elemetnów: 0
+Element <main> | Znaleziono elemetnów: 0
+Element <nav> | Znaleziono elemetnów: 1
+Element <picture> | Znaleziono elemetnów: 0
+Element <video> | Znaleziono elemetnów: 0
+Element <article> | Znaleziono elemetnów: 0
+Element <footer> | Znaleziono elemetnów: 0
+Element <form> | Znaleziono elemetnów: 0
+-------WYNIKI PODSUMOWUJĄCE NR 9 SERP ZAWIERA-------
+
+-------FRAZĘ WYSZUKIWANIA JEST ZAWARTA W------- 
+tylko w sekcji body: 83
+słowach kluczowych: 0
+opis: 1
+link: 0
+nagłówki h1: 1
+ h2: 4
+ h3: 12
+ h4: 3
+ h5: 2
+ h6: 0
+
+-------sILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ-------
+tylko w sekcji body: 0
+słowach kluczowych: 0
+opis: 0
+link: 0
+nagłówki h1: 0
+ h2: 0
+ h3: 0
+ h4: 0
+ h5: 0
+ h6: 0
+
+-------ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W-------
+tylko w sekcji body: 512
+
