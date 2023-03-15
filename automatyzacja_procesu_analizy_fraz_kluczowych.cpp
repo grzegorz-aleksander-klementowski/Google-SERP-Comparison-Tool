@@ -170,6 +170,7 @@ vector<vector<string>> wektor_wiersza_naglowkowego_tabeli_csv_analizy_autom()
     wiersz.push_back("link");
     wiersz.push_back("ilość części linku");
     wiersz.push_back("Błąd lub przekierowanie");
+    wiersz.push_back("Ilość znaków w sekcji body");
     wiersz.push_back("ilość frazy kluczowej");
     //--------------------------------------------
     fstream plik;

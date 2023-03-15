@@ -203,7 +203,7 @@ string podsumowanie_wyników_serp(string frazaGlowna, int nr_PlikuDoAnalizy)
 
         string cialoStrony = wypisz_cialo_strony(sciezkaDoPliku);
 
-
+        int cialoStronyDlugosc = cialoStrony.length();
         int ilewPlikuFraz=0, ileKeywords=0;
         int nrNaglowka, nrCzesciLinku=0, nr_wypisywanegoNaglowka = 1;
         int iloscNaglowkow_h=6;
@@ -241,7 +241,7 @@ string podsumowanie_wyników_serp(string frazaGlowna, int nr_PlikuDoAnalizy)
             for(int k=1;k<=iloscSlowFrazy;k++)ilosc_tylkoBody[0] = ilosc_tylkoBody[0] + ilosc_frazy_w_fragmencie(cialoStrony, wyjmij_slowo_o_numerze(frazaDoWyszukania[0],k));
             //ilosc_tylkoBody[0] = ilosc_frazy_w_fragmencie(cialoStrony, frazaDoWyszukania[0]);// liczy ilosc frazy gł. w <body>
 
-            sStream << endl << endl << endl << "        DANE Z WYNIKU SERP NR: "<< nr_pliku << endl;
+            sStream << "        DANE Z POZYCJI WYNIKU WYSZUKIWANIA NR: "<< nr_pliku << endl;
             //CZŚCI LINKU
             linkStrony = wypisz_link_z_pliku_przeanalizowanych_wyników_serp(nr_pliku);
             int inloscCzesciLinku = ilosc_frazy_w_fragmencie(linkStrony,"/")-1;
@@ -271,13 +271,14 @@ string podsumowanie_wyników_serp(string frazaGlowna, int nr_PlikuDoAnalizy)
                 ilosc_tylkoBody[2]  = ilosc_tylkoBody[2]    + ilosc_frazy_w_fragmencie(cialoStrony, czescLinku[nrCzesciLinku]);
                 ilosc_opis[2]  = ilosc_opis[2]    + ilosc_frazy_w_fragmencie(opis, czescLinku[nrCzesciLinku]);
                 nrCzesciLinku++;
-                czescLinku[nrCzesciLinku] = wypisz_czesci_linku(nr_pliku,nrCzesciLinku); //TU JEST BŁĄĄĄĄD!!!
+                czescLinku[nrCzesciLinku] = wypisz_czesci_linku(nr_pliku,nrCzesciLinku);
 
 
             }
 
             sStream<<"Ilość części linku: "<<nrCzesciLinku<<endl;
             sStream<<"Błąd lub przekierowanie: "<<czy_plik_jest_pusty(sciezkaDoPliku)<<endl;
+            sStream<<"Ilość znaków w sekcji body: "<< cialoStronyDlugosc << endl;
             for(int i=0; i<iloscFraz; i++)
             {
                 ilosc_h[1][1] = 0;
@@ -401,7 +402,7 @@ string podsumowanie_wyników_serp(string frazaGlowna, int nr_PlikuDoAnalizy)
 
 
 
-            sStream << "-------WYNIKI PODSUMOWUJĄCE NR "<< nr_pliku <<" SERP ZAWIERA-------"<<endl<<endl;
+            sStream << endl << endl << "-------WYNIKI PODSUMOWUJĄCE POZCJĘ WYNIKOWĄ NR "<< nr_pliku <<"-------"<<endl<<endl;
             for(int l=0;l<iloscTypowPodsumowania;l++)
             sStream<<wypisz_obliczenia_podsumowania
                 (
@@ -927,9 +928,9 @@ int ilosc_h6
     stringstream sStream;
 
     //sStream << "-------WYNIK NR "<< nr_pliku <<" SERP ZAWIERA-------"<<endl;
-    if(typ==0) nazwa = "-------FRAZĘ WYSZUKIWANIA JEST ZAWARTA W------- \n";
-    else if(typ==1) nazwa = "-------sILOŚĆ SŁÓW KLUCZOWYCH MOŻNA ZNALEŹĆ-------\n";
-    else if(typ==2) nazwa = "-------ILE RAZY CZESCI LINKU ZNAJDUJĄ SIĘ W-------\n";
+    if(typ==0) nazwa = "-------SŁOWA Z FRAZY KLUCZOWEJ SĄ ZAWARTE W-------  \n";
+    else if(typ==1) nazwa = "-------SŁOWA KLUCZOWE ZNAJDUJĄ SIĘ W-------\n";
+    else if(typ==2) nazwa = "-------ILE RAZY CZĘŚCI ŚCIEŻKI URL ZNAJDUJE SIĘ W-------\n";
     else nazwa = "I: nieznany typ wyniku.";
 
     sStream << nazwa;
@@ -941,7 +942,7 @@ int ilosc_h6
         << "słowach kluczowych: "    << ilosc_slowaKluczowe  << endl
         << "opis: "                  << ilosc_opis           << endl
         << "link: "                  << ilosc_link           << endl
-        << "nagłówki h1: " << ilosc_h1 << "\n h2: " << ilosc_h2 << "\n h3: " << ilosc_h3 << "\n h4: " << ilosc_h4 << "\n h5: "
+        << "nagłówki " << "\nh1: " << ilosc_h1 << "\n h2: " << ilosc_h2 << "\n h3: " << ilosc_h3 << "\n h4: " << ilosc_h4 << "\n h5: "
         << ilosc_h5 << "\n h6: " << ilosc_h6 << endl;
 
     }

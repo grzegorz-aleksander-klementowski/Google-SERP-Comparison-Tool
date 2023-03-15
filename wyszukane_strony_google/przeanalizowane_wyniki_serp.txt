@@ -8,9 +8,9 @@ strona 0.: fajnepodroze.pl
 strona 1.: krakow-atrakcje
 LINK: https://fajnepodroze.pl/krakow-atrakcje/
 --------------------------------
-Wynik [02]: Atrakcje Kraków, ciekawe miejsca w Krakowie i okolicy - Noclegowo
+Wynik [02]: Atrakcje Kraków, ciekawe miejsca w Krakowie i okolicy - Noclegowo.pl
 OPIS STRONY: 
-Kraków - atrakcje · Kopiec Kościuszki · Kościół Mariacki WNMP · Barbakan · Smocza Jama · Katedra na Wawelu · Sukiennice · AquaPark Wodny Park w Krakowie · Stara ...
+Co warto zobaczyć w Krakowie i okolicy? Odkryj najciekawsze miejsca i atrakcje turystyczne ✓ Opinie ✓ Mapa ✓ Zdjęcia ✓ Sprawdź!
 WARSTWY STRONY: 
 strona 0.: www.noclegowo.pl
 strona 1.: atrakcje
@@ -59,15 +59,7 @@ strona 1.: miasta
 strona 2.: 99-top-8-atrakcji-turystycznych-krakowa
 LINK: https://przeglad-turystyczny.pl/miasta/99-top-8-atrakcji-turystycznych-krakowa
 --------------------------------
-Wynik [08]: Co warto zobaczyć w Krakowie? Atrakcje, zabytki i ciekawe miejsca.
-OPIS STRONY: 
-Ciekawe miejsca i największe atrakcje Krakowa. ... pobyt w Grodzie Kraka i tym razem szukasz mniej oczywistych atrakcji turystycznych?
-WARSTWY STRONY: 
-strona 0.: polskapogodzinach.pl
-strona 1.: atrakcje-krakowa
-LINK: https://polskapogodzinach.pl/atrakcje-krakowa/
---------------------------------
-Wynik [09]: Kraków na weekend. Co warto zobaczyć w Krakowie w 2 dni?
+Wynik [08]: Kraków na weekend. Co warto zobaczyć w Krakowie w 2 dni?
 OPIS STRONY: 
 Poznaj najciekawsze atrakcje Krakowa i gotowy plan zwiedzania Krakowa w ... Skupiliśmy się w nim na najciekawszych atrakcjach turystycznych ...
 WARSTWY STRONY: 
@@ -75,6 +67,14 @@ strona 0.: 101countriesbefore50.com
 strona 1.: polska
 strona 2.: krakow-na-weekend
 LINK: https://101countriesbefore50.com/polska/krakow-na-weekend/
+--------------------------------
+Wynik [09]: Co warto zobaczyć w Krakowie? Atrakcje, zabytki i ciekawe miejsca.
+OPIS STRONY: 
+Ciekawe miejsca i największe atrakcje Krakowa. ... pobyt w Grodzie Kraka i tym razem szukasz mniej oczywistych atrakcji turystycznych?
+WARSTWY STRONY: 
+strona 0.: polskapogodzinach.pl
+strona 1.: atrakcje-krakowa
+LINK: https://polskapogodzinach.pl/atrakcje-krakowa/
 --------------------------------
 Wynik [10]: atrakcje turystyczne 2023, ciekawe miejsca w Krakowie i ... - Kraków
 OPIS STRONY: 

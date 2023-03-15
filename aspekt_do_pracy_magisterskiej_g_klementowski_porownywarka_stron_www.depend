@@ -383,3 +383,63 @@
 
 1678369268 source:/home/klemens_gak/Dokumenty/Projekty/Programowanie/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/utils.cpp
 
+1677778788 source:/home/klemens_gak/Projekty/src/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/analiza_pliku_google_SERP.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	"analiza_pliku_google_SERP.h"
+	"globals.h"
+
+1677778789 /home/klemens_gak/Projekty/src/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/analiza_pliku_google_SERP.h
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+
+1678114958 /home/klemens_gak/Projekty/src/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/globals.h
+	<string>
+
+1678635839 source:/home/klemens_gak/Projekty/src/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/automatyzacja_procesu_analizy_fraz_kluczowych.cpp
+	<iostream>
+	<string>
+	<vector>
+	<fstream>
+	<chrono>
+	<thread>
+	<cstdlib>
+	<filesystem>
+	<ctime>
+	<iomanip>
+	<sstream>
+	"podsumowanieWynikówSERP.h"
+	"globals.h"
+
+1678215392 /home/klemens_gak/Projekty/src/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/podsumowanieWynikówSERP.h
+	<string>
+	"utils.hpp"
+
+1678369236 /home/klemens_gak/Projekty/src/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/utils.hpp
+
+1678102628 source:/home/klemens_gak/Projekty/src/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/globals.cpp
+	"globals.h"
+
+1678369688 source:/home/klemens_gak/Projekty/src/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<filesystem>
+	<cstdlib>
+	<time.h>
+	<vector>
+	"analiza_pliku_google_SERP.h"
+	"podsumowanieWynikówSERP.h"
+	"automatyzacja_procesu_analizy_fraz_kluczowych.h"
+	"globals.h"
+
+1678369678 /home/klemens_gak/Projekty/src/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/automatyzacja_procesu_analizy_fraz_kluczowych.h
+
+1678369268 source:/home/klemens_gak/Projekty/src/C++/aspekt_do_pracy_magisterskiej_g_klementowski_porownywarka_stron_www/utils.cpp
+
